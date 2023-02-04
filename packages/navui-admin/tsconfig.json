@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "preserve",
+    "resolveJsonModule": true,//可以模块化 引入json文件
+    "isolatedModules": true,
+    "esModuleInterop": true,//导入cjs文件方便 
+    "lib": ["ESNext", "DOM"],
+    "skipLibCheck": true,
+    "noEmit": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue","dev-ui/**/*.ts", "dev-ui/**/*.d.ts", "dev-ui/**/*.tsx", "dev-ui/**/*.vue"]
+
+}

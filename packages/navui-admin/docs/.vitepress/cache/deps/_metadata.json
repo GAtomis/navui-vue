@@ -1,0 +1,23 @@
+{
+  "hash": "c8a9bb31",
+  "browserHash": "d92d1bd4",
+  "optimized": {
+    "vue": {
+      "src": "../../../../../../node_modules/.pnpm/registry.npmmirror.com+vue@3.2.47/node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "59d44eca",
+      "needsInterop": false
+    },
+    "@ant-design/icons-vue": {
+      "src": "../../../../../../node_modules/.pnpm/registry.npmmirror.com+@ant-design+icons-vue@6.1.0_vue@3.2.47/node_modules/@ant-design/icons-vue/es/index.js",
+      "file": "@ant-design_icons-vue.js",
+      "fileHash": "2984c3de",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-6FVGSOU7": {
+      "file": "chunk-6FVGSOU7.js"
+    }
+  }
+}

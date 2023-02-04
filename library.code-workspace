@@ -1,0 +1,9 @@
+
+
+{
+    "folders": [
+      { "name": "root", "path": "." },
+      { "name": "@library/navui-env", "path": "./packages/navui-env" },
+      { "name": "@library/navui-admin", "path": "./packages/navui-admin" }
+    ]
+}
