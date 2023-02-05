@@ -8,7 +8,7 @@ import fsExtra from 'fs-extra'
 const __filenameNew = fileURLToPath(import.meta.url)
 
 const __dirnameNew = path.dirname(__filenameNew)
-const entryDir = path.resolve(__dirnameNew, '../../../dev-ui')
+const entryDir = path.resolve(__dirnameNew, '../../../nav-ui')
 const outputDir = path.resolve(__dirnameNew, '../../../build')
 
 //vite配置

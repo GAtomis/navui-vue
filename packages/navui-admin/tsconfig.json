@@ -12,10 +12,9 @@
     "plugins": [{ "name": "@vuedx/typescript-plugin-vue" }],
     "lib": ["ESNext", "DOM"],
     "skipLibCheck": true,
-    "noEmit": true,
     "declaration": true,
     "declarationDir": "build/types",
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue","dev-ui/**/*.ts", "dev-ui/**/*.d.ts", "dev-ui/**/*.tsx", "dev-ui/**/*.vue"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue","nav-ui/**/*.ts", "nav-ui/**/*.d.ts", "nav-ui/**/*.tsx", "nav-ui/**/*.vue"]
 
 }

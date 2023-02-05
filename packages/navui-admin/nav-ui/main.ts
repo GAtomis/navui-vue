@@ -2,17 +2,17 @@
  * @Author: GAtomis 850680822@qq.com
  * @Date: 2023-01-16 23:00:02
  * @LastEditors: GAtomis
- * @LastEditTime: 2023-02-05 04:41:09
+ * @LastEditTime: 2023-02-05 16:11:22
  * @Description: 头部注释
  */
 import type {App} from 'vue'
-import TreeInstall,{TreeTest} from './tree-test'
+
 import GfgButtonInstall,{GfgButton} from "./gfg-button"
 
-const installs =[TreeInstall,GfgButtonInstall]
+const installs =[GfgButtonInstall]
 
 export {
-    TreeTest,
+    
     GfgButton
 }
 

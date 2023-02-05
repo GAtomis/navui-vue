@@ -9,7 +9,7 @@ import { createPackageJson, buildSingle } from './demand-loading.js'
 import {execSync} from "child_process"
 const __filenameNew = fileURLToPath(import.meta.url)
 const __dirnameNew = path.dirname(__filenameNew)
-const entryDir = path.resolve(__dirnameNew, '../../../dev-ui')
+const entryDir = path.resolve(__dirnameNew, '../../../nav-ui')
 const outputDir = path.resolve(__dirnameNew, '../../../build')
 
 //vite配置
@@ -35,9 +35,9 @@ const buildAll = async () => {
         build: {
             rollupOptions,
             lib: {
-                entry: path.resolve(entryDir, 'dev-ui.ts'),
-                name: 'dev-ui',
-                fileName: 'dev-ui',
+                entry: path.resolve(entryDir, 'main.ts'),
+                name: 'index',
+                fileName: 'index',
                 formats: ['es', 'umd']
             },
             outDir: outputDir
