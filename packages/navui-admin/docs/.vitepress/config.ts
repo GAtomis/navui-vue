@@ -1,7 +1,8 @@
 
 
-import { demoBlockPlugin } from 'vitepress-theme-demoblock'
-
+// import { demoBlockPlugin } from 'vitepress-theme-demoblock'
+// import {useThemeDemoBlock}from './demoblock/use-demoblock'
+import demoblock from 'vitepress-demoblock';
 const sidebar =()=>({
     '/': [
         {
@@ -27,8 +28,9 @@ export default {
     },
     markdown:{
         config:(md)=>{
-    
-            md.use(demoBlockPlugin)
+     
+            // md.use(demoBlockPlugin)
+            md.use(demoblock)
         }
 
     }

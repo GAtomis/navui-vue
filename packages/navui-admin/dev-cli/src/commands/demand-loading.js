@@ -49,7 +49,9 @@ const createPackageJson = name=>{
         "version":"0.0.0",
         "main":"index.umd.js",
         "module":"index.js",
-        "style":"style.css"
+        "style":"style.css",
+        "types": "../types/${name}/index.d.ts"
+
     }`
     fsExtra.outputFile(
         path.resolve(outputDir,`${name}/package.json`),

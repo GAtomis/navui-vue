@@ -1,3 +1,4 @@
+
 import path from 'path'
 import fs from 'fs'
 import { defineConfig, build } from 'vite'
@@ -5,6 +6,7 @@ import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { fileURLToPath } from 'url'
 import { createPackageJson, buildSingle } from './demand-loading.js'
+import {execSync} from "child_process"
 const __filenameNew = fileURLToPath(import.meta.url)
 const __dirnameNew = path.dirname(__filenameNew)
 const entryDir = path.resolve(__dirnameNew, '../../../dev-ui')
@@ -57,5 +59,15 @@ const buildLib = async () => {
         await buildSingle(name)
         createPackageJson(name)
     }
+    try {
+        execSync(`pnpm run build:components:dts`);
+    } catch { }
+
+    fs.writeFileSync('./build/index.d.ts', `
+      export * from './types/vue-devui';
+      import _default from './types/vue-devui';
+      export default _default;
+      `);
+
 }
 buildLib()

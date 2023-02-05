@@ -11,6 +11,7 @@
     "docs:serve": "vitepress serve docs",
     "test": "jest --config jest.config.js",
     "build:components": "node ./dev-cli/src/commands/build.js",
+    "build:components:dts": "vue-tsc --declaration --emitDeclarationOnly",
     "build:lib": "yarn build:components && cp package.json build && cp README.md build",
     "cli:dev": "esbuild --bundle ./dev-cli/src/index.js --format=cjs --platform=node --outfile=./lib/index.cjs --watch",
     "cli:build": "esbuild --bundle ./dev-cli/src/index.js --format=cjs --platform=node --outfile=./lib/index.cjs",
@@ -30,6 +31,7 @@
     "@vue/babel-plugin-jsx": "^1.1.1",
     "@vue/test-utils": "^2.2.7",
     "babel-jest": "^29.3.1",
+    "child_process": "^1.0.2",
     "commander": "^9.4.1",
     "esbuild": "^0.16.12",
     "fs-extra": "^11.1.0",
@@ -42,8 +44,10 @@
     "vite": "^4.0.0",
     "vite-svg-loader": "^2.2.0",
     "vitepress": "1.0.0-alpha.45",
+    "vitepress-demoblock": "^1.0.4",
     "vitepress-theme-demoblock": "^2.0.2",
-    "vue-tsc": "^1.0.11"
+    "vue-tsc": "^1.0.11",
+    "@vuedx/typescript-plugin-vue":"^0.7.6"
   },
   "license": "MIT"
 }

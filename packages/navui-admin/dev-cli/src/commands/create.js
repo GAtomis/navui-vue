@@ -1,5 +1,3 @@
-
-
 import inquirer from 'inquirer'
 import { red } from 'kolorist'
 const CREATE_TYPES = ['component', 'lib-entry']
