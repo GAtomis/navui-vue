@@ -14,7 +14,7 @@ const nav = [
   {
     text: '组件',
     activeMatch: `^/components/`,
-    link: '/components/button/'
+    link: '/components/button/gfg-button/'
   },
   { text: "🔗 Github", link: "https://github.com/GAtomis/Vxios" },
 ]
