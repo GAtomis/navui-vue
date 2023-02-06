@@ -2,14 +2,15 @@
 <template>
 
   <div class="container">
-    <nav-gfg-button>Add</nav-gfg-button>
-    <nav-gfg-button type="danger">Delete</nav-gfg-button>
-    <nav-gfg-button :type="type">
+    <nav-gfg-button  >Add</nav-gfg-button>
+    <nav-gfg-button :disabled="true" :type="`danger`" >Delete</nav-gfg-button>
+    <nav-gfg-button :type="type" :disabled="true">
       <template #icon>
         <i class="iconfont">&#xe64a;</i>
       </template>
       {{ words }}
     </nav-gfg-button>
+
   </div>
 
 </template>
@@ -18,7 +19,7 @@ import { defineComponent, ref } from 'vue';
 import type {GfgButtonProps} from "../../../../build/types/gfg-button"
 import {SearchOutlined} from '@ant-design/icons-vue'
   const type= ref<GfgButtonProps['type']>("success")
-  const words= ref("icon")
+  const words= ref("Icon")
 
 
 </script>
