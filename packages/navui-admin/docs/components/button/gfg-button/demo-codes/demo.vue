@@ -4,10 +4,7 @@
   <div class="container">
     <nav-gfg-button  >Add</nav-gfg-button>
     <nav-gfg-button :disabled="true" :type="`danger`" >Delete</nav-gfg-button>
-    <nav-gfg-button :type="type" :disabled="true">
-      <template #icon>
-        <i class="iconfont">&#xe64a;</i>
-      </template>
+    <nav-gfg-button :type="`success`">
       {{ words }}
     </nav-gfg-button>
 
@@ -20,7 +17,7 @@ import type {GfgButtonProps} from "../../../../../build/types/gfg-button"
 
 import {GfgButton as NavGfgButton} from "../../../../../nav-ui/main"
   const type= ref<GfgButtonProps['type']>("success")
-  const words= ref("Icon")
+  const words= ref("So")
 </script>
 <style scoped>
 

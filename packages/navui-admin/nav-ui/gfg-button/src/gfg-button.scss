@@ -10,6 +10,7 @@
     line-height: 30px;
     padding: .618em 1em;
     border-radius: 10px 10px 12px 12px;
+
     box-shadow:
         0px 8px 0px 0px #2980b9,
         /* button thickness */
@@ -26,7 +27,7 @@
     text-shadow: 1px 1px 1px #34495e;
     transform: rotateX(5deg);
     margin: 10px 10px;
-    min-width: 200px;
+    min-width: 150px;
     text-align: left;
     &:hover {
         margin-top: 15px;
