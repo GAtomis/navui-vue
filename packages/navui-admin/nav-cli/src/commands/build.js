@@ -64,8 +64,8 @@ const buildLib = async () => {
     } catch { }
 
     fs.writeFileSync('./build/index.d.ts', `
-      export * from './types/vue-devui';
-      import _default from './types/vue-devui';
+      export * from './types/main';
+      import _default from './types/main';
       export default _default;
       `);
 
