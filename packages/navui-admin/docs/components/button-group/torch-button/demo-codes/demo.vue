@@ -16,12 +16,11 @@
 </template>
 <script lang="ts" setup>
 import { defineComponent, ref } from 'vue';
-import type {GfgButtonProps} from "../../../../build/types/gfg-button"
-import {SearchOutlined} from '@ant-design/icons-vue'
+import type {GfgButtonProps} from "../../../../../build/types/gfg-button"
+
+import {GfgButton as NavGfgButton} from "../../../../../nav-ui/main"
   const type= ref<GfgButtonProps['type']>("success")
   const words= ref("Icon")
-
-
 </script>
 <style scoped>
 

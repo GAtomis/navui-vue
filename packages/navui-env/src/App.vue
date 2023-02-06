@@ -2,7 +2,7 @@
  * @Author: GAtomis 850680822@qq.com
  * @Date: 2023-01-16 23:00:02
  * @LastEditors: GAtomis
- * @LastEditTime: 2023-02-05 05:21:02
+ * @LastEditTime: 2023-02-06 21:42:22
  * @Description: 头部注释
 -->
 <script setup lang="ts">
@@ -80,12 +80,12 @@ const data = ref([
 
 <template>
   <div>
-    <h1>组件测试场景</h1>
+     
   </div>
 
   <nav-gfg-button>
     <template #icon><SearchOutlined/></template>
-    我就去上班
+    
   </nav-gfg-button>
 
   <d-tree-test :data="data"></d-tree-test>
@@ -93,6 +93,7 @@ const data = ref([
 </template>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css?family=Raleway:800");
 .logo {
   height: 6em;
   padding: 1.5em;
