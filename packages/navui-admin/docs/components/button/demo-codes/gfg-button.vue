@@ -17,7 +17,7 @@
 import { defineComponent, ref } from 'vue';
 import type {} from "../../../../build/"
  import {SearchOutlined} from '@ant-design/icons-vue'
-  const words= ref<string>("Sear dasds说")
+  const words= ref<string>("hai")
 </script>
 <style scoped>
 .container {
