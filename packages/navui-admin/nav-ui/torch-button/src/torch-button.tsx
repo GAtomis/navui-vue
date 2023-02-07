@@ -2,8 +2,8 @@
  * @Author: GAtomis 850680822@qq.com
  * @Date: 2023-02-04 23:35:12
  * @LastEditors: GAtomis
- * @LastEditTime: 2023-02-07 23:51:35
- * @Description: 头部注释
+ * @LastEditTime: 2023-02-07 23:52:44
+ * @Description: torch-button
  */
 import { defineComponent, toRefs, renderSlot, useSlots } from 'vue';
 import type { SetupContext } from 'vue';
@@ -17,10 +17,7 @@ export default defineComponent({
 
     return () => (
       <button style={`--color:${props.color}`} class={`navui-torchButton `}  >
-         <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+ 
         {slots.default?.() ?? "Glow"}
       </button>
     );
