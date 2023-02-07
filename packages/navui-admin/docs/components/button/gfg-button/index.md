@@ -8,7 +8,8 @@ nav上很炫酷的按钮 目前只有这三种颜色根据类型type去选择需
 
 <demo src="./demo-codes/demo.vue" desc="通过 type 改变按钮的颜色,支持各种原生属性"></demo>
 
-## 带Icon的按钮
+## icon的按钮
+通过插槽来加入icon实现带icon的按钮
 <demo src="./demo-codes/demo-slot.vue" desc="通过icon的插槽实现"></demo>
 
 ## 组件参数

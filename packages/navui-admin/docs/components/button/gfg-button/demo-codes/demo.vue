@@ -17,7 +17,7 @@ import type {GfgButtonProps} from "../../../../../build/types/gfg-button"
 
 import {GfgButton as NavGfgButton} from "../../../../../nav-ui/main"
   const type= ref<GfgButtonProps['type']>("success")
-  const words= ref("So")
+  const words= ref("So do i")
 </script>
 <style scoped>
 
