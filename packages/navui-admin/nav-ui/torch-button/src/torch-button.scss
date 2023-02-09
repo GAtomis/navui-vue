@@ -1,19 +1,50 @@
 // 引入主题变量
 @import '../../styles/global.scss';
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,700&display=swap');
 
 .#{$globa-prefix}-torchButton {
-  
+    padding: 8px 10px;
+    border-radius: 50px;
+    background: #fff;
+    border: .5px solid hsla(228, 16%, 63%, 0.4);
+    box-shadow: 0 0 10px hsla(228, 16%, 63%, 0.2), 4px 4px 10px hsla(228, 16%, 63%, 0.2);
+    cursor: default;
 
-    &:hover {
-     
-
+    button {
+        border: 0 solid transparent;
+        background: transparent;
+        padding: 10px 30px;
+        margin: 0 -2px;
+        color: #273043;
+        font-size: 17px;
+        border-radius: 12px;
+        cursor: pointer;
+        position: relative;
+        top: 0;
+        left: 0;
+        outline: none;
+        transition: background 0.2s ease-in-out;
+    
+    
+    
+    }
+    & :hover {
+        background: #f0f1f4;
+    }
+    & :active {
+        outline: none;
+        background: #d6d8e1;
     }
 
-   
+    & :first-child {
+        border-top-left-radius: 40px;
+        border-bottom-left-radius: 40px;
+    }
 
-    &:active {}
-
+    & :last-child {
+        border-top-right-radius: 40px;
+        border-bottom-right-radius: 40px;
+    }
 
 
 
@@ -46,3 +77,30 @@
         filter: hue-rotate(255deg) saturate(1.2);
     }
 }
+
+@keyframes tooltip-animation-right {
+    0% {
+      transform: translateX(-75px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes tooltip-animation-left{
+    0% {
+      transform: translateX(75px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes tooltip-animation-normal{
+    0% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }

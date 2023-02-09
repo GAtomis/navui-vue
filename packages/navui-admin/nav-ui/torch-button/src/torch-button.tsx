@@ -2,7 +2,7 @@
  * @Author: GAtomis 850680822@qq.com
  * @Date: 2023-02-04 23:35:12
  * @LastEditors: GAtomis
- * @LastEditTime: 2023-02-07 23:52:44
+ * @LastEditTime: 2023-02-08 23:40:15
  * @Description: torch-button
  */
 import { defineComponent, toRefs, renderSlot, useSlots } from 'vue';
@@ -13,13 +13,13 @@ export default defineComponent({
   name: 'NavTorchButton',
   props: torchButtonProps,
   setup(props: TorchButtonProps, { slots }: SetupContext) {
-    
-
+      const buttonRef =(item:any)=><><button></button></>
     return () => (
-      <button style={`--color:${props.color}`} class={`navui-torchButton `}  >
- 
-        {slots.default?.() ?? "Glow"}
-      </button>
+      <div style={`--color:${props.color}`} class={`navui-torchButton`}>
+        <button>A</button>
+        <button>B</button>
+        <button>C</button>
+      </div>
     );
   }
 });

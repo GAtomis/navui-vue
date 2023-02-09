@@ -27,7 +27,7 @@ const sidebar ={
                 text:"button-group",
                 collapsible: true,
                 items:[
-                    { text: 'GfgButton', link: '/components/button-group/torch-button/' }, // /guide/index.md
+                    { text: 'TorchButton', link: '/components/button-group/torch-button/' }, // /guide/index.md
                 ]
                }
             ]
