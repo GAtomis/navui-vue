@@ -1,15 +1,13 @@
 
 const nav = [
-
   {
     text: '首页',
     link: '/',
-
   },
   {
     text: '文档',
     activeMatch: `^/guide`,
-    link: "/guide/"
+    link: "/guide/introduction/"
   },
   {
     text: '组件',
