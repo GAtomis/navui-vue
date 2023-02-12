@@ -2,48 +2,57 @@
 @import '../../styles/global.scss';
 
 .#{$globa-prefix}-torchButton {
-  padding: 8px 10px;
-  border-radius: 50px;
-  background: #fff;
-  border: .5px solid hsla(228, 16%, 63%, 0.4);
-  box-shadow: 0 0 10px hsla(228, 16%, 63%, 0.2), 4px 4px 10px hsla(228, 16%, 63%, 0.2);
-  cursor: default;
+  position: relative;
 
   & :hover {
     background: #f0f1f4;
   }
 
-  & :active {
-    outline: none;
-    background: #d6d8e1;
+  & :active {}
+
+  &-tooltip {
+    position: absolute;
+    top: -43px;
+    left: calc(50% - 40px);
+    width: 80px;
+    font-size: 13px;
+    color: #fff;
+    background: hsla(221, 27%, 11%, 0.7);
+    border-radius: 16px;
+    line-height: 30px;
+    font-family: 'Raleway', Arial, sans-serif;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 1px;
+    box-shadow: 0 0 5px hsla(221, 27%, 21%, 0.3), 1px 1px 5px hsla(221, 27%, 21%, 0.2);
+    display: none;
+    cursor: pointer;
+    &:hover {
+      background: hsla(228, 16%, 95%, 1);
+
+      div {
+        display: block;
+        animation: tooltip-animation-normal 0.3s ease-out forwards;
+      }
+
+      div.animate-right {
+        animation: tooltip-animation-right 0.3s ease-out forwards;
+      }
+
+      div.animate-left {
+        animation: tooltip-animation-left 0.3s ease-out forwards;
+      }
+    }
+    &:active {
+      outline: none;
+      background: hsla(228, 16%, 86%, 1);
+    }
+
   }
 
-  & :first-child {
-    border-top-left-radius: 40px;
-    border-bottom-left-radius: 40px;
-  }
-
-  & :last-child {
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
-  }
 }
 
-.#{$globa-prefix}-torchButton > * {
-  border: 0 solid transparent;
-  background: transparent;
-  padding: 10px 30px;
-  margin: 0 -2px;
-  color: #273043;
-  font-size: 17px;
-  border-radius: 12px;
-  cursor: pointer;
-  position: relative;
-  top: 0;
-  left: 0;
-  outline: none;
-  transition: background 0.2s ease-in-out;
-}
+.#{$globa-prefix}-torchButton>* {}
 
 .#{$globa-prefix}-torchButton--primary {}
 

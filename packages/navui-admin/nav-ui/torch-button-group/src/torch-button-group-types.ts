@@ -2,20 +2,21 @@
  * @Author: GAtomis 850680822@qq.com
  * @Date: 2023-02-04 23:35:12
  * @LastEditors: GAtomis
- * @LastEditTime: 2023-02-12 16:38:12
+ * @LastEditTime: 2023-02-12 16:19:42
  * @Description: 头部注释
  */
 import type { PropType, ExtractPropTypes } from 'vue';
 
 
-export const torchButtonProps = {
+export const torchButtonGroupProps = {
   color: {
     type: String ,
     default: "#03e9f4",
-    
   
   },
-  isTooltip:Boolean
+  tooltip:{
+    type:Boolean
+  }
 } as const;
 
-export type TorchButtonProps = ExtractPropTypes<typeof torchButtonProps>;
+export type TorchButtonGroupProps = ExtractPropTypes<typeof torchButtonGroupProps>;

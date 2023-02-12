@@ -2,8 +2,8 @@
 <template>
 
   <div class="container">
-    <nav-torch-button >
-      <button>
+    <nav-torch-button-group >
+      <!-- <button>
         <i class="iconfont icon-paperplane-fill"></i>
       </button>
       <button>
@@ -11,15 +11,20 @@
       </button>
       <button>
         <i class="iconfont icon-folder-fill"></i>
-      </button>
-    </nav-torch-button>
+      </button> -->
+      <nav-torch-button> <i class="iconfont icon-paperplane-fill"></i></nav-torch-button>
+      <nav-torch-button> <i class="iconfont icon-paperplane-fill"></i></nav-torch-button>
+      <nav-torch-button> <i class="iconfont icon-paperplane-fill"></i></nav-torch-button>
+      <nav-torch-button> <i class="iconfont icon-paperplane-fill"></i></nav-torch-button>
+
+    </nav-torch-button-group>
   </div>
 
 </template>
 <script lang="ts" setup>
 import {  ref } from 'vue';
 
-import {TorchButton as NavTorchButton} from "../../../../../nav-ui/main"
+import {TorchButton as NavTorchButton,TorchButtonGroup as NavTorchButtonGroup} from "../../../../../nav-ui/main"
 
   const words= ref("Icon")
 </script>
