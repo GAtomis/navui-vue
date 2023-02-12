@@ -2,7 +2,7 @@
  * @Author: GAtomis 850680822@qq.com
  * @Date: 2023-02-04 23:35:12
  * @LastEditors: GAtomis
- * @LastEditTime: 2023-02-12 19:57:49
+ * @LastEditTime: 2023-02-13 00:41:21
  * @Description: multi-button-group
  */
 import { defineComponent, provide, computed, onMounted, ref } from 'vue';
@@ -15,10 +15,10 @@ export default defineComponent({
   setup(props: MultiButtonGroupProps, { slots }: SetupContext) {
 
     const multiButtonGroupRef = ref<HTMLButtonElement>()
-    const isTooltip = computed(() => props.tooltip)
-    provide("isTooltip", isTooltip)
+    const tooltip = computed(() => props.tooltip)
+    provide("tooltip", tooltip)
     return () => (
-      <div style={`--color:${props.color}`} ref={multiButtonGroupRef} class={`navui-multiButtonGroup`}>
+      <div style={`--hoverColor:${props.hoverColor};--activeColor:${props.activeColor}`} ref={multiButtonGroupRef} class={`navui-multiButtonGroup`}>
         {slots.default?.() ?? ""}
       </div>
     );

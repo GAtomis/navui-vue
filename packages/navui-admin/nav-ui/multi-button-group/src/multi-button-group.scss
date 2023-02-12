@@ -2,22 +2,14 @@
 @import '../../styles/global.scss';
 
 .#{$globa-prefix}-multiButtonGroup {
+  --hoverColor:#f0f1f4;
+  --activeColor:#d6d8e1;
   padding: 8px 10px;
   border-radius: 50px;
   background: #fff;
   border: .5px solid hsla(228, 16%, 63%, 0.4);
   box-shadow: 0 0 10px hsla(228, 16%, 63%, 0.2), 4px 4px 10px hsla(228, 16%, 63%, 0.2);
   cursor: default;
-
-  & :hover {
-    background: #f0f1f4;
-  }
-
-  & :active {
-    outline: none;
-    background: #d6d8e1;
-  }
-
   &>:first-child {
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
@@ -41,6 +33,14 @@
     left: 0;
     outline: none;
     transition: background 0.2s ease-in-out;
+    &:hover {
+      background: var(--hoverColor)
+    }
+  
+    &:active {
+      outline: none;
+      background: var(--activeColor)
+    }
   }
 }
 

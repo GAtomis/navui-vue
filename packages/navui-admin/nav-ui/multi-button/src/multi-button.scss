@@ -3,22 +3,18 @@
 
 .#{$globa-prefix}-multiButton {
   &:hover {
-    background: #f0f1f4;
-    &{
-      background: hsla(228, 16%, 95%, 1);
 
-      div {
-        display: block;
-        animation: tooltip-animation-normal 0.3s ease-out forwards;
-      }
+    div {
+      display: block;
+      animation: tooltip-animation-normal 0.3s ease-out forwards;
+    }
 
-      div.animate-right {
-        animation: tooltip-animation-right 0.3s ease-out forwards;
-      }
+    div.animate-right {
+      animation: tooltip-animation-right 0.3s ease-out forwards;
+    }
 
-      div.animate-left {
-        animation: tooltip-animation-left 0.3s ease-out forwards;
-      }
+    div.animate-left {
+      animation: tooltip-animation-left 0.3s ease-out forwards;
     }
   }
 
@@ -26,7 +22,7 @@
 
   &-tooltip {
     position: absolute;
-    top: -43px;
+    top: -100%;
     left: calc(50% - 40px);
     width: 80px;
     font-size: 13px;

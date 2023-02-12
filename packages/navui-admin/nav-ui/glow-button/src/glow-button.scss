@@ -2,7 +2,11 @@
 @import '../../styles/global.scss';
 // @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
+
+
+
 .#{$globa-prefix}-glowButton {
+    --color:"#03e9f4";
     transition: all 0.15s;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;

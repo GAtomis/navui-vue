@@ -2,7 +2,7 @@
  * @Author: GAtomis 850680822@qq.com
  * @Date: 2023-01-16 23:00:02
  * @LastEditors: GAtomis
- * @LastEditTime: 2023-02-06 21:42:22
+ * @LastEditTime: 2023-02-12 22:27:37
  * @Description: 头部注释
 -->
 <script setup lang="ts">
@@ -80,11 +80,11 @@ const data = ref([
 
 <template>
   <div>
-     
+     <HelloWorld></HelloWorld>
   </div>
 
   <nav-gfg-button>
-    <template #icon><SearchOutlined/></template>
+
     
   </nav-gfg-button>
 

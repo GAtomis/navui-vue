@@ -1,38 +1,33 @@
-<script setup lang="ts">
-import { ref } from 'vue'
-
-defineProps<{ msg: string }>()
-
-const count = ref(0)
-</script>
 
 <template>
-  <h1>{{ msg }}</h1>
 
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
+  <div class="container">
+    <!-- <nav-multi-button-group  tooltip >
+      <nav-multi-button > <i class="iconfont icon-paperplane-fill"></i></nav-multi-button>
+      <nav-multi-button tip="link"> <i class="iconfont icon-link"></i></nav-multi-button>
+      <nav-multi-button  tip="cart"> <i class="iconfont icon-shopping-cart-fill"></i></nav-multi-button>
+      <nav-multi-button> <i class="iconfont icon-delete-fill"></i> 
+        <template #tooltip>
+            delete
+        </template>
+       </nav-multi-button>
+    </nav-multi-button-group> -->
+    <div>1232</div>
+
   </div>
 
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Install
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-    in your IDE for a better DX
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 </template>
+<script lang="ts" setup>
+import {  ref } from 'vue';
 
+
+
+</script>
 <style scoped>
-.read-the-docs {
-  color: #888;
+@import url(//at.alicdn.com/t/c/font_3882013_ongjfg9mkdo.css);
+.container {
+  min-height: 600px;
+  /* display: flex; */
+
 }
 </style>

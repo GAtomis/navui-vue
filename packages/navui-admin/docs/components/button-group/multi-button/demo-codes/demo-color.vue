@@ -2,7 +2,7 @@
 <template>
 
   <div class="container">
-    <nav-multi-button-group tooltip >
+    <nav-multi-button-group tooltip active-color="#c522ea" hover-color="#e2b5ec">
       <nav-multi-button> <i class="iconfont icon-paperplane-fill"></i></nav-multi-button>
       <nav-multi-button tip="link"> <i class="iconfont icon-link"></i></nav-multi-button>
       <nav-multi-button tip="cart"> <i class="iconfont icon-shopping-cart-fill"></i></nav-multi-button>
