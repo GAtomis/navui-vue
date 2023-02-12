@@ -7,16 +7,16 @@
  */
 import { defineComponent, toRefs, renderSlot, useSlots } from 'vue';
 import type { SetupContext } from 'vue';
-import { TorchButtonProps, torchButtonProps } from './torch-button-types';
-import './torch-button.scss';
+import { MultiButtonProps, multiButtonProps } from './multi-button-types';
+import './multi-button.scss';
 export default defineComponent({
-  name: 'NavTorchButton',
-  props: torchButtonProps,
-  setup(props: TorchButtonProps, { slots }: SetupContext) {
+  name: 'NavMultiButton',
+  props: multiButtonProps,
+  setup(props: MultiButtonProps, { slots }: SetupContext) {
     
 
     return () => (
-      <button style={`--color:${props.color}`} class={`navui-torchButton `}  >
+      <button style={`--color:${props.color}`} class={`navui-multiButton `}  >
          <span></span>
         <span></span>
         <span></span>

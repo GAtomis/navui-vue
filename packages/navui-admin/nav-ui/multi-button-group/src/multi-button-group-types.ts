@@ -8,7 +8,7 @@
 import type { PropType, ExtractPropTypes } from 'vue';
 
 
-export const torchButtonGroupProps = {
+export const multiButtonGroupProps = {
   color: {
     type: String ,
     default: "#03e9f4",
@@ -19,4 +19,4 @@ export const torchButtonGroupProps = {
   }
 } as const;
 
-export type TorchButtonGroupProps = ExtractPropTypes<typeof torchButtonGroupProps>;
+export type MultiButtonGroupProps = ExtractPropTypes<typeof multiButtonGroupProps>;

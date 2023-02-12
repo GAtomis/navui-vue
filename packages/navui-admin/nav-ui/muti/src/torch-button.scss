@@ -2,7 +2,7 @@
 @import '../../styles/global.scss';
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
-.#{$globa-prefix}-torchButton {
+.#{$globa-prefix}-multiButton {
     transition: all 0.15s;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
@@ -137,9 +137,9 @@
 
 }
 
-.#{$globa-prefix}-torchButton--primary {}
+.#{$globa-prefix}-multiButton--primary {}
 
-.#{$globa-prefix}-torchButton--danger {
+.#{$globa-prefix}-multiButton--danger {
     filter: hue-rotate(155deg);
 
     &:hover {
@@ -151,7 +151,7 @@
     }
 }
 
-.#{$globa-prefix}-torchButton--success {
+.#{$globa-prefix}-multiButton--success {
     filter: hue-rotate(255deg) saturate(.8);
     ;
 

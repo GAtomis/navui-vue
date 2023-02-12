@@ -1,11 +1,25 @@
 // 引入主题变量
 @import '../../styles/global.scss';
 
-.#{$globa-prefix}-torchButton {
-  position: relative;
-
-  & :hover {
+.#{$globa-prefix}-multiButton {
+  &:hover {
     background: #f0f1f4;
+    &{
+      background: hsla(228, 16%, 95%, 1);
+
+      div {
+        display: block;
+        animation: tooltip-animation-normal 0.3s ease-out forwards;
+      }
+
+      div.animate-right {
+        animation: tooltip-animation-right 0.3s ease-out forwards;
+      }
+
+      div.animate-left {
+        animation: tooltip-animation-left 0.3s ease-out forwards;
+      }
+    }
   }
 
   & :active {}
@@ -27,22 +41,7 @@
     box-shadow: 0 0 5px hsla(221, 27%, 21%, 0.3), 1px 1px 5px hsla(221, 27%, 21%, 0.2);
     display: none;
     cursor: pointer;
-    &:hover {
-      background: hsla(228, 16%, 95%, 1);
 
-      div {
-        display: block;
-        animation: tooltip-animation-normal 0.3s ease-out forwards;
-      }
-
-      div.animate-right {
-        animation: tooltip-animation-right 0.3s ease-out forwards;
-      }
-
-      div.animate-left {
-        animation: tooltip-animation-left 0.3s ease-out forwards;
-      }
-    }
     &:active {
       outline: none;
       background: hsla(228, 16%, 86%, 1);
@@ -52,11 +51,11 @@
 
 }
 
-.#{$globa-prefix}-torchButton>* {}
+.#{$globa-prefix}-multiButton>* {}
 
-.#{$globa-prefix}-torchButton--primary {}
+.#{$globa-prefix}-multiButton--primary {}
 
-.#{$globa-prefix}-torchButton--danger {
+.#{$globa-prefix}-multiButton--danger {
   filter: hue-rotate(155deg);
 
   &:hover {
@@ -68,7 +67,7 @@
   }
 }
 
-.#{$globa-prefix}-torchButton--success {
+.#{$globa-prefix}-multiButton--success {
   filter: hue-rotate(255deg) saturate(.8);
   ;
 

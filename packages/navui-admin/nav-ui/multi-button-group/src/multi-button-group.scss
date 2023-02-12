@@ -1,7 +1,7 @@
 // 引入主题变量
 @import '../../styles/global.scss';
 
-.#{$globa-prefix}-torchButtonGroup {
+.#{$globa-prefix}-multiButtonGroup {
   padding: 8px 10px;
   border-radius: 50px;
   background: #fff;
@@ -46,9 +46,9 @@
 
 
 
-.#{$globa-prefix}-torchButtonGroup--primary {}
+.#{$globa-prefix}-multiButtonGroup--primary {}
 
-.#{$globa-prefix}-torchButtonGroup--danger {
+.#{$globa-prefix}-multiButtonGroup--danger {
   filter: hue-rotate(155deg);
 
   &:hover {
@@ -60,7 +60,7 @@
   }
 }
 
-.#{$globa-prefix}-torchButtonGroup--success {
+.#{$globa-prefix}-multiButtonGroup--success {
   filter: hue-rotate(255deg) saturate(.8);
   ;
 

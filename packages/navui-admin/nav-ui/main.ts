@@ -9,16 +9,16 @@ import type {App} from 'vue'
 
 import GfgButtonInstall,{GfgButton} from "./gfg-button"
 import GlowButtonInstall,{GlowButton} from "./glow-button"
-import TorchButtonGroupInstall,{TorchButtonGroup} from "./torch-button-group"
-import TorchButtonInstall,{TorchButton} from "./torch-button"
-const installs =[GfgButtonInstall,GlowButtonInstall,TorchButtonGroupInstall,TorchButtonInstall]
+import MultiButtonGroupInstall,{MultiButtonGroup} from "./multi-button-group"
+import MultiButtonInstall,{MultiButton} from "./multi-button"
+const installs =[GfgButtonInstall,GlowButtonInstall,MultiButtonGroupInstall,MultiButtonInstall]
 
 export {
     
     GfgButton,
     GlowButton,
-    TorchButtonGroup,
-    TorchButton
+    MultiButtonGroup,
+    MultiButton
 }
 
 

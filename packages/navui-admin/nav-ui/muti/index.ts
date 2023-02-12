@@ -6,17 +6,17 @@
  * @Description: 按钮
  */
 import type { App } from 'vue';
-import TorchButton from './src/torch-button';
+import MultiButton from './src/multi-button';
 
-export * from './src/torch-button-types';
+export * from './src/multi-button-types';
 
-export { TorchButton };
+export { MultiButton };
 
 export default {
-  title: 'torch-button 按钮',
+  title: 'multi-button 按钮',
   category: '数据展示',
   status: '1%', // TODO 组件完成状态，开发完组件新特性请及时更新该状态值；若组件开发完成则填入'100%'，并删除该注释
   install(app: App): void {
-    app.component(TorchButton.name, TorchButton);
+    app.component(MultiButton.name, MultiButton);
   }
 };

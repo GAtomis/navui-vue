@@ -1,11 +1,11 @@
 import { ComponentPublicInstance } from 'vue';
 import { DOMWrapper, mount, VueWrapper } from '@vue/test-utils';
-import { TorchButton } from '..';
+import { MultiButtonGroup } from '..';
 
-describe('torch-button', () => {
+describe('multi-button-group', () => {
   let wrapper: VueWrapper<ComponentPublicInstance>;
 
-  it('torch-button init render', async () => {
+  it('multi-button-group init render', async () => {
     wrapper = mount({
       setup() {
         return () => {
@@ -16,7 +16,7 @@ describe('torch-button', () => {
     console.log(wrapper.element);
     
     // todo
-    expect(wrapper.classes()).toContain('devui-torch-button');
+    expect(wrapper.classes()).toContain('navui-multi-button-group');
     expect(wrapper.element.childElementCount).toBe(10);
   })
   
