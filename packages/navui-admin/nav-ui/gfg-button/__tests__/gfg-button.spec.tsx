@@ -16,7 +16,7 @@ describe('gfg-button', () => {
     console.log(wrapper.element);
     
     // todo
-    expect(wrapper.classes()).toContain('devui-gfg-button');
+    expect(wrapper.classes()).toContain('navui-gfg-button');
     expect(wrapper.element.childElementCount).toBe(10);
   })
   

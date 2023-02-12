@@ -16,7 +16,7 @@ describe('glow-button', () => {
     console.log(wrapper.element);
     
     // todo
-    expect(wrapper.classes()).toContain('devui-glow-button');
+    expect(wrapper.classes()).toContain('navui-glow-button');
     expect(wrapper.element.childElementCount).toBe(10);
   })
   
