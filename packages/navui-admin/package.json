@@ -14,13 +14,15 @@
     "build:components": "node ./nav-cli/src/commands/build.js",
     "build:components:dts": "vue-tsc --declaration --emitDeclarationOnly",
     "build:lib": "yarn build:components && cp package.json build && cp README.md build",
-    "cli:dev": "esbuild --bundle ./nav-ui/src/index.js --format=cjs --platform=node --outfile=./lib/index.cjs --watch",
-    "cli:build": "esbuild --bundle ./nav-ui/src/index.js --format=cjs --platform=node --outfile=./lib/index.cjs",
-    "cli": "node ./lib/index.cjs create"
+    "cli:dev": "esbuild --bundle ./nav-cli/src/index.js --format=cjs --platform=node --outfile=./nav-cli/lib/index.cjs --watch",
+    "cli:build": "esbuild --bundle ./nav-cli/src/index.js --format=cjs --platform=node --outfile=./nav-cli/lib/index.cjs",
+    "cli": "node ./nav-cli/lib/index.cjs create"
   },
   "dependencies": {
     "@ant-design/icons-vue": "^6.1.0",
     "@vueuse/core": "^9.12.0",
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
     "vue": "^3.2.47"
   },
   "devDependencies": {

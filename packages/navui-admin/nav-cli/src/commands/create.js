@@ -1,5 +1,6 @@
 import inquirer from 'inquirer'
 import { red } from 'kolorist'
+import { createFolder } from './createFolder'
 const CREATE_TYPES = ['component', 'lib-entry']
 
 const DOCS_CATEGORIES = ['通用', '导航', '数据录入', '数据展示', '布局']
@@ -79,5 +80,7 @@ export async function onCreate(cm = {}) {
 
 } 
 function createComponent(info){
-   console.log(info);
+   createFolder(info)
 }
+
+

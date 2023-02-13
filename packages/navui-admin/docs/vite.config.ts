@@ -4,3 +4,4 @@ import setupJSX from '@vitejs/plugin-vue-jsx'
 export default defineConfig({
   plugins: [setupJSX()],
 })
+
