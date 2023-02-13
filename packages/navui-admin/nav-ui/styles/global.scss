@@ -3,6 +3,8 @@ $globa-prefix: navui;
 
 
 :root{
+
+  --nav-shadow:rgba(0, 0, 0, .5)
     // Fonts As per the type scale generator => https://material-io.cn/inline-tools/typography/
  --fontBig: 7em; //88 px
  --fontxxxl: 5.5em; //88 px

@@ -51,9 +51,8 @@ export type ${bigCamelCase(componentName)}Props = ExtractPropTypes<typeof ${came
 // 创建scss模板
 export const createStyleTemplate = ({ componentName }) => `\
 // 引入主题变量
-@import '../../styles-var/devui-var.scss';
+@import '../../styles/global.scss';
 .#{$globa-prefix}-${componentName} {
-  //
 }
 `;
 

@@ -37,7 +37,7 @@ async function createFile(params) {
     const type = fs.promises.writeFile(`./${VUE_NAV_UI_DIR_NAME}/${componentName}/src/${typesName}.ts`, createTypesTemplate(params))
     const tests = fs.promises.writeFile(`./${VUE_NAV_UI_DIR_NAME}/${componentName}/__tests__/${testName}.tsx`, createTestsTemplate(params))
     //index
-    const index = fs.promises.writeFile(`./${VUE_NAV_UI_DIR_NAME}/${componentName}/${INDEX_FILE_NAME}.ts`, createIndexTemplate(params))
+    const index = fs.promises.writeFile(`./${VUE_NAV_UI_DIR_NAME}/${componentName}/${INDEX_FILE_NAME}`, createIndexTemplate(params))
 
     return await Promise.all([components,css,type,tests,index])
 
