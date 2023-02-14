@@ -16,11 +16,15 @@ export default defineComponent({
 
     return () => {
       return (
-        <Overlay visible={props.modelValue}>
+        <Overlay visible={props.modelValue} >
           <Transition name={`drawer-fly-${props.position}`}>  
             {
               props.modelValue&& (<div class={`${ns.b()} ${props.position}`} style={{width:props.width}}> 
-                 {slots.default?.()   }   
+
+              <div>
+              {slots.default?.()   }   
+              </div>
+            
             </div>)
             }
           </Transition>

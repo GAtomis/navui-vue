@@ -5,7 +5,7 @@
 import demoblock from 'vitepress-demoblock';
 import  {footer,nav,sidebar} from './layout/index'
 export default {
-    title: 'NavNav+',
+    title: 'Navui',
     description: '这是个有趣的组件合集',
     appearance: true,
     base:"/navui-vue-docs/",
