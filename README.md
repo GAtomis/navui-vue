@@ -1,7 +1,7 @@
 
 
 
-
+## [文档地址](https://gatomis.github.io/navui-vue-docs/components/button/gfg-button/)
 ## 组件库搭建教学
 ### 配置tsconfig
 查看tsconfig文件修改相关配置

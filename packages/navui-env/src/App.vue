@@ -2,7 +2,7 @@
  * @Author: GAtomis 850680822@qq.com
  * @Date: 2023-01-16 23:00:02
  * @LastEditors: GAtomis
- * @LastEditTime: 2023-02-12 22:27:37
+ * @LastEditTime: 2023-02-14 13:30:43
  * @Description: 头部注释
 -->
 <script setup lang="ts">
@@ -83,10 +83,7 @@ const data = ref([
      <HelloWorld></HelloWorld>
   </div>
 
-  <nav-gfg-button>
 
-    
-  </nav-gfg-button>
 
   <d-tree-test :data="data"></d-tree-test>
 
@@ -94,15 +91,5 @@ const data = ref([
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css?family=Raleway:800");
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+
 </style>

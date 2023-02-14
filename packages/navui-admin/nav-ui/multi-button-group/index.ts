@@ -1,10 +1,4 @@
-/*
- * @Author: GAtomis 850680822@qq.com
- * @Date: 2023-02-04 19:55:49
- * @LastEditors: GAtomis
- * @LastEditTime: 2023-02-06 22:38:07
- * @Description: 按钮
- */
+
 import type { App } from 'vue';
 import MultiButtonGroup from './src/multi-button-group';
 

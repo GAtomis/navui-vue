@@ -1,10 +1,4 @@
-/*
- * @Author: GAtomis 850680822@qq.com
- * @Date: 2023-02-04 23:35:12
- * @LastEditors: GAtomis
- * @LastEditTime: 2023-02-13 00:52:26
- * @Description: multi-button
- */
+
 import { defineComponent, ref, inject, computed, } from 'vue';
 import type { SetupContext, Ref } from 'vue';
 import { MultiButtonProps, multiButtonProps } from './multi-button-types';

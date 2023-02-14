@@ -5,6 +5,15 @@ export const overlayProps = {
   //   type: type,
   //   default: defaultValue
   // },
+  visible: {
+    type: Boolean,
+    default: false,
+  },
+  onClick: {
+    type: Function,
+  },
+
+
 } as const;
 
 export type OverlayProps = ExtractPropTypes<typeof overlayProps>;
