@@ -1,10 +1,13 @@
 import type { PropType, ExtractPropTypes } from 'vue';
 
 export const nobleButtonProps = {
-  // data: {
-  //   type: type,
-  //   default: defaultValue
-  // },
+  round:Boolean,
+  underline:Boolean,
+  circle:Boolean,
+  color:{
+    type:String,
+    default:""
+  }
 } as const;
 
 export type NobleButtonProps = ExtractPropTypes<typeof nobleButtonProps>;

@@ -11,6 +11,7 @@
       <nav-gfg-button @click="handleOpen">开启抽屉</nav-gfg-button>
 
       <nav-gfg-button @click="handleOverlay">打开遮照</nav-gfg-button>
+      <nav-noble-button></nav-noble-button>
     </div>
 
 

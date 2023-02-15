@@ -5,8 +5,8 @@ const sidebar = {
 
     '/guide/': [
         {
-            text:"开始",
-            items:[
+            text: "开始",
+            items: [
                 { text: '简介', link: '/guide/introduction/' },
                 { text: '快速开始', link: '/guide/quick-start/' },
             ]
@@ -33,8 +33,22 @@ const sidebar = {
                     collapsible: true,
                     items: [
                         { text: 'MultiButton', link: '/components/button-group/multi-button/' }, // /guide/index.md
-                        
+
                     ]
+                },
+                {
+                    text: "LV Style",
+                    collapsible: true,
+                    collapsed: !true,
+                    items: [
+                        {
+                            text: 'Button', link: '/components/noble/button/'
+                        },
+                        {
+                            text: 'drawer', link: '/components/noble/drawer/'
+                        },
+                    ]
+
                 }
             ]
         },

@@ -4,7 +4,7 @@
 .#{$globa-prefix}-drawer {
     --nav-drawer-bg-color: #ffffff;
     --nav-drawer-padding-primary: 20px;
-    --nav-box-shadow-dark:0px 16px 48px 16px rgba(0, 0, 0, .08), 0px 12px 32px rgba(0, 0, 0, .12), 0px 8px 16px -8px rgba(0, 0, 0, .16);
+    --nav-box-shadow-dark: 0px 16px 48px 16px rgba(0, 0, 0, .08), 0px 12px 32px rgba(0, 0, 0, .12), 0px 8px 16px -8px rgba(0, 0, 0, .16);
     position: absolute;
     box-sizing: border-box;
     background-color: var(--nav-drawer-bg-color);
@@ -14,15 +14,17 @@
     overflow: hidden;
     transition: all var(--nav-transition-duration);
 
-    &.right{
+    &.right {
         right: 0
     }
-    &.right,&.left{
+
+    &.right,
+    &.left {
         height: 100%;
         top: 0;
         bottom: 0;
     }
- 
+
 }
 
 
@@ -40,6 +42,38 @@
         opacity: 0;
         transform: translateX(100%);
     }
+
+    
+
+    &-top-enter-active {
+        transition: all 0.3s cubic-bezier(0.16, 0.75, 0.5, 1);
+    }
+
+    &-top-leave-active {
+        transition: all 0.3s cubic-bezier(0.5, 0, 0.84, 0.25);
+    }
+    &-top-enter-from,
+    &-top-leave-to {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+
+    &-bottom-enter-active {
+        transition: all 0.3s cubic-bezier(0.16, 0.75, 0.5, 1);
+    }
+
+    &-bottom-leave-active {
+        transition: all 0.3s cubic-bezier(0.5, 0, 0.84, 0.25);
+    }
+
+    &-bottom-enter-from,
+    &-bottom-leave-to {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+
 
     &-left-enter-active {
         transition: all 0.3s cubic-bezier(0.16, 0.75, 0.5, 1);

@@ -11,10 +11,10 @@ export const drawerProps = {
   },
   zIndex: {
     type: Number,
-    default: 1040,
+    default: 1400,
   },
   position: {
-    type: String as PropType<'left' | 'right'>,
+    type: String as PropType<'left' | 'right'|'top'|'bottom'>,
     default: 'right',
   },
 } as const;

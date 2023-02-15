@@ -3,17 +3,19 @@ import GfgButtonInstall, { GfgButton } from "./gfg-button"
 import GlowButtonInstall, { GlowButton } from "./glow-button"
 import MultiButtonGroupInstall, { MultiButtonGroup } from "./multi-button-group"
 import MultiButtonInstall, { MultiButton } from "./multi-button"
-import overlayInstall,{Overlay} from "./overlay"
-import drawerInstall,{Drawer} from "./drawer"
+import overlayInstall, { Overlay } from "./overlay"
+import drawerInstall, { Drawer } from "./drawer"
+import nobleButtonInstall, { NobleButton } from './noble-button'
 import "./styles/global.scss"
 const installs = [
     GfgButtonInstall,
-     GlowButtonInstall, 
-     MultiButtonGroupInstall, 
-     MultiButtonInstall,
-     overlayInstall,
-     drawerInstall
-    ]
+    GlowButtonInstall,
+    MultiButtonGroupInstall,
+    MultiButtonInstall,
+    overlayInstall,
+    drawerInstall,
+    nobleButtonInstall
+]
 
 export {
     Overlay,
@@ -21,6 +23,7 @@ export {
     GlowButton,
     MultiButtonGroup,
     MultiButton,
+    NobleButton,
     Drawer
 }
 export default {

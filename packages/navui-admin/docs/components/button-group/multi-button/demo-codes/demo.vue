@@ -12,7 +12,7 @@
 
 </template>
 <script lang="ts" setup>
-import { MultiButton as NavMultiButton, MultiButtonGroup as NavMultiButtonGroup } from "../../../../../nav-ui/main"
+import { MultiButtonGroup as NavMultiButtonGroup } from "../../../../../nav-ui/main"
 
 </script>
 <style scoped>
