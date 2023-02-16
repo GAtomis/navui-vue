@@ -6,6 +6,8 @@ import MultiButtonInstall, { MultiButton } from "./multi-button"
 import overlayInstall, { Overlay } from "./overlay"
 import drawerInstall, { Drawer } from "./drawer"
 import nobleButtonInstall, { NobleButton } from './noble-button'
+import nobleCardInstall,{NobleCard} from "./noble-card"
+import nobleSwiperInstall,{Swiper} from "./swiper"
 import "./styles/global.scss"
 const installs = [
     GfgButtonInstall,
@@ -14,7 +16,9 @@ const installs = [
     MultiButtonInstall,
     overlayInstall,
     drawerInstall,
-    nobleButtonInstall
+    nobleButtonInstall,
+    nobleCardInstall,
+    nobleSwiperInstall
 ]
 
 export {
@@ -24,7 +28,9 @@ export {
     MultiButtonGroup,
     MultiButton,
     NobleButton,
-    Drawer
+    Drawer,
+    NobleCard,
+    Swiper
 }
 export default {
     verison: '0.0.1',

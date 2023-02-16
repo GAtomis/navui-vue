@@ -12,7 +12,9 @@
     "@ant-design/icons-vue": "^6.1.0",
     "@library/navui-admin": "workspace:^0.0.1",
     "vue": "^3.2.47",
-    "reset-css": "^5.0.1"
+    "reset-css": "^5.0.1",
+    "swiper": "^9.0.5",
+    "sass":"1.58.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",

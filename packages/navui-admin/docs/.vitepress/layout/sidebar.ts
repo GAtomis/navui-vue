@@ -29,6 +29,13 @@ const sidebar = {
                 {
                     text: 'Overlay', link: '/components/noble/overlay/'
                 },
+                {
+                    text: 'Card', link: '/components/noble/card/'
+                },
+                
+                {
+                    text: 'Swiper', link: '/components/noble/swiper/'
+                },
                 
             ]
 
