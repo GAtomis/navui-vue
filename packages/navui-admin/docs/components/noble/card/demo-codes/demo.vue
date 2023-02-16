@@ -1,12 +1,12 @@
 
 <template>
   <div class="container">
-    <nav-noble-card></nav-noble-card>
+    暂未开发
   </div>
 </template>
 <script lang="ts" setup>
 import {  ref } from 'vue';
-import { NobleCard as NavNobleCard} from "../../../../../nav-ui/main"
+
 
 
 </script>
