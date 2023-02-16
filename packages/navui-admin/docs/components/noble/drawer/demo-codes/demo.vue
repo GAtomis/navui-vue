@@ -9,15 +9,14 @@
     <nav-noble-button @click="(e)=>handleClick(e,'right')"> 右</nav-noble-button>
     <nav-noble-button @click="(e)=>handleClick(e,'bottom')"> 下</nav-noble-button>
     <nav-noble-button  @click="(e)=>handleClick(e,'left')" > 左</nav-noble-button>
-    <Overlay :visible="vis"></Overlay>
+
   </div>
 </template>
 <script lang="ts" setup>
 import {  ref } from 'vue';
-import {  Drawer as NavDrawer,NobleButton as NavNobleButton ,Overlay} from "../../../../../nav-ui/main"
+import {  Drawer as NavDrawer,NobleButton as NavNobleButton } from "../../../../../nav-ui/main"
 import type {DrawerProps} from  "../../../../../nav-ui/drawer/index"
  const visible=ref(false)
- const vis=ref(false)
  const position= ref<DrawerProps['position']>('right')
  const handleClick=(e:MouseEvent,key:DrawerProps['position'])=>{
     position.value=key

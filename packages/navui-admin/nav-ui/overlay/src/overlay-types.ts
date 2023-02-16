@@ -6,7 +6,7 @@ export const overlayProps = {
   //   type: type,
   //   default: defaultValue
   // },
-  visible: {
+  modelValue: {
     type: Boolean,
     default: false,
   },

@@ -16,7 +16,7 @@
 </template>
 <script lang="ts" setup>
 import {  ref } from 'vue';
-import {  Drawer as NavDrawer,NobleButton as NavNobleButton ,Overlay} from "../../../../../nav-ui/main"
+import {  Drawer as NavDrawer,NobleButton as NavNobleButton } from "../../../../../nav-ui/main"
 import type {DrawerProps} from  "../../../../../nav-ui/drawer/index"
  const left=ref(false)
  const right=ref(false)

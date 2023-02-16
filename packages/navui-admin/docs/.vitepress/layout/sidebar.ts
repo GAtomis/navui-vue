@@ -16,7 +16,25 @@ const sidebar = {
     ],
     '/components/': [
         {
-            text: 'components',
+            text: "LV Style",
+            collapsible: true,
+            collapsed: !true,
+            items: [
+                {
+                    text: 'Button', link: '/components/noble/button/'
+                },
+                {
+                    text: 'Drawer', link: '/components/noble/drawer/'
+                },
+                {
+                    text: 'Overlay', link: '/components/noble/overlay/'
+                },
+                
+            ]
+
+        },
+        {
+            text: 'navnav+',
             items: [
                 // This shows `/guide/index.md` page.
                 {
@@ -36,22 +54,11 @@ const sidebar = {
 
                     ]
                 },
-                {
-                    text: "LV Style",
-                    collapsible: true,
-                    collapsed: !true,
-                    items: [
-                        {
-                            text: 'Button', link: '/components/noble/button/'
-                        },
-                        {
-                            text: 'drawer', link: '/components/noble/drawer/'
-                        },
-                    ]
-
-                }
+           
             ]
         },
+
+     
 
     ],
     "/api/": [{

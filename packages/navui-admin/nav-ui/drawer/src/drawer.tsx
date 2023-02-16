@@ -36,7 +36,7 @@ export default defineComponent({
     </header>)
     return () => {
       return (
-        <Overlay visible={props.modelValue} >
+        <Overlay v-model={props.modelValue} >
           <Transition name={`drawer-fly-${props.position}`}>
             {
               props.modelValue && (<div class={`${ns.b()} ${props.position}`} style={styles.value}>

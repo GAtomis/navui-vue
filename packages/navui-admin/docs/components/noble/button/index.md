@@ -1,6 +1,6 @@
 
-# Button
-按钮
+# Button 按钮
+
 
 ## 基本用法
 <demo src="./demo-codes/demo.vue" desc="基本样式按钮"></demo>
