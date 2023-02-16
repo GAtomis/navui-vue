@@ -5,13 +5,21 @@ export const drawerProps = {
     type: Boolean,
     default: false,
   },
-  width:{
+  size:{
     type: String,
     default: "30%",
   },
   zIndex: {
     type: Number,
     default: 1400,
+  },
+  title:{
+    type:String,
+    default:""
+  },
+  withHeader:{
+    type:Boolean,
+    default:true
   },
   position: {
     type: String as PropType<'left' | 'right'|'top'|'bottom'>,

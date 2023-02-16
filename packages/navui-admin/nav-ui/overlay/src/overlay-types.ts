@@ -1,5 +1,6 @@
+import { type } from 'os';
 import type { PropType, ExtractPropTypes } from 'vue';
-
+type Mode="normal"|"component"
 export const overlayProps = {
   // data: {
   //   type: type,
@@ -9,9 +10,14 @@ export const overlayProps = {
     type: Boolean,
     default: false,
   },
+  mode:{
+    type:String as  PropType<Mode>,
+    default:"normal"
+  },
   onClick: {
     type: Function,
   },
+
 
 
 } as const;

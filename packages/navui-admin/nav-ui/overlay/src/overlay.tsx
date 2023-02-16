@@ -1,7 +1,8 @@
-import { defineComponent, toRefs, renderSlot, Teleport, Transition } from 'vue';
+import { defineComponent, watch, Teleport, Transition, computed } from 'vue';
 import type { SetupContext } from 'vue';
 import { overlayProps, OverlayProps } from './overlay-types';
 import './overlay.scss';
+import { lockScroll } from '../../shared/utils/lockscroll'
 import { useNamespace } from '../../shared/hooks/use-namespace'
 export default defineComponent({
   name: 'NavOverlay',
@@ -14,11 +15,24 @@ export default defineComponent({
     const handleClick = (e: Event) => {
       emit('click', e);
     };
+    watch(() => props.visible, (val) => {
+      if (val) {
+        setBody("hidden")
+      } else {
+        setBody()
+      }
+    })
+    //禁止滚动
+    const setBody = (str: string = "") => {
+      document.getElementsByTagName('body')[0].style.overflow = str;
+    }
+
     const ns = useNamespace('overlay');
+
     const OverlayWrap = () => <div class={ns.b()} onClick={handleClick}></div>
     return () => (<Teleport to="body">
       <Transition name={ns.e('fade')}>{props.visible && <OverlayWrap />} </Transition>
-      {renderSlot(slots, 'default')}
+      {slots?.default?.()}
     </Teleport>);
   }
 });

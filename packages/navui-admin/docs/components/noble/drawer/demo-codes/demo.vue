@@ -3,24 +3,23 @@
   <div class="container">
     <nav-drawer :position="position" v-model="visible">
       <span>加入购物</span>
+      <button @click="()=>visible=false"> 关闭</button>
     </nav-drawer>
     <nav-noble-button @click="(e)=>handleClick(e,'top')"> 上</nav-noble-button>
     <nav-noble-button @click="(e)=>handleClick(e,'right')"> 右</nav-noble-button>
-    <nav-noble-button> 下</nav-noble-button>
-    <nav-noble-button> 左</nav-noble-button>
-    
-
+    <nav-noble-button @click="(e)=>handleClick(e,'bottom')"> 下</nav-noble-button>
+    <nav-noble-button  @click="(e)=>handleClick(e,'left')" > 左</nav-noble-button>
+    <Overlay :visible="vis"></Overlay>
   </div>
 </template>
 <script lang="ts" setup>
 import {  ref } from 'vue';
-import {  Drawer as NavDrawer,NobleButton as NavNobleButton } from "../../../../../nav-ui/main"
+import {  Drawer as NavDrawer,NobleButton as NavNobleButton ,Overlay} from "../../../../../nav-ui/main"
 import type {DrawerProps} from  "../../../../../nav-ui/drawer/index"
  const visible=ref(false)
+ const vis=ref(false)
  const position= ref<DrawerProps['position']>('right')
  const handleClick=(e:MouseEvent,key:DrawerProps['position'])=>{
-  console.log(key);
-  
     position.value=key
     visible.value=true
  }
