@@ -2,7 +2,7 @@
  * @Author: GAtomis 850680822@qq.com
  * @Date: 2023-02-05 12:58:56
  * @LastEditors: GAtomis
- * @LastEditTime: 2023-02-05 14:31:47
+ * @LastEditTime: 2023-02-17 16:06:27
  * @Description: 头部注释
  */
 
@@ -16,7 +16,7 @@ export function useDemoBlock() {
     return {
 
         install:(app:any)=>{
-            app.component('Demo', demoComp)
+            app.component('Demo', Demo)
         }
     }
 }

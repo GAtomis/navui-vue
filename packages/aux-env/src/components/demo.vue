@@ -1,14 +1,15 @@
 
 <template>
   <div class="container">
-    <AuxSwiper style="width:60%; height:100%;" :data="data" >
+    <AuxSwiper style="width:60%; height:100%;" :data="data" key="1">
     </AuxSwiper>
   </div>
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { Swiper as AuxSwiper } from "../../../../../aux-ui/main"
-import type { SwiperProps } from "../../../../../aux-ui/swiper/index"
+
+
+import { SwiperProps } from '@library/aux-admin/build/types/swiper';
 const data = ref<SwiperProps['data']>([
   {
     id: "2",
