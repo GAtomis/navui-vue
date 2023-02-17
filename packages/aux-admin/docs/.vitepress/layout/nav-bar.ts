@@ -14,6 +14,6 @@ const navBar = [
     activeMatch: `^/components/`,
     link: '/components/button/gfg-button/'
   },
-  { text: "🔗 Github", link: "/components/noble/button/" },
+  { text: "🔗 Github", link: "https://github.com/GAtomis/navui-vue" },
 ]
 export default navBar
