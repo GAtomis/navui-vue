@@ -1,0 +1,55 @@
+@import './font.scss';
+$globa-prefix: aux;
+
+:root {
+  --aux-shadow: rgba(0, 0, 0, .5) // Fonts As per the type scale generator => https://material-io.cn/inline-tools/typography/
+    --fontBig: 7em; //88 px
+  --fontxxxl: 5.5em; //88 px
+  --fontxxl: 3.4375em; //55 px
+  --fontxl: 2.75em; //44 px
+  --fontlg: 1.9375em; //31 px
+  --fontmd: 1.375em; //22 px
+  --fontsm: 1.125em; //18 px
+  --fontxs: 1em; //16 px
+  --fontxxs: 0.75em; //12 px
+  --aux-line-background:#fff;
+  --aux-text-color:#fff;
+  --aux-hover-text-color:#eee;
+
+  // Colors
+  --dark: #000000;
+  --grey: #666666;
+  --greyLight: #979797;
+  --offWhite: #eeeeee;
+  --white: #ffffff;
+  --blue: #0071e3;
+  --blueRgba: "0, 113, 227";
+
+  //fonts
+  --fontL: "Source Sans Pro light";
+  --fontR: "Source Sans Pro";
+
+  // gradient
+  --gradient: #35c3f3 0%, #8b9fe8 20%, #e681d8 39%, #ffa9a4 76%, #fed2ce 100%;
+
+
+  --aux-transition-duration: .3s;
+}
+
+
+.#{$globa-prefix}--underline {
+  span {
+    background-image: linear-gradient(#19110b, #19110b);
+    background-size: 0 1px;
+    background-repeat: no-repeat;
+    transition: background-size .3s cubic-bezier(.39, .575, .565, 1);
+    background-position: 0 100%;
+  }
+
+  &:hover {
+    span {
+      background-size: 100% 1px;
+    }
+
+  }
+}

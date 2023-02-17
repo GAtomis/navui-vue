@@ -3,8 +3,8 @@
 {
     "folders": [
       { "name": "root", "path": "." },
-      { "name": "@library/navui-env", "path": "./packages/navui-env" },
-      { "name": "@library/navui-admin", "path": "./packages/navui-admin" }
+      { "name": "@library/aux-env", "path": "./packages/aux-env" },
+      { "name": "@library/aux-admin", "path": "./packages/aux-admin" }
     ],
     "settings": {
       "liveServer.settings.multiRootWorkspaceName": "root"
