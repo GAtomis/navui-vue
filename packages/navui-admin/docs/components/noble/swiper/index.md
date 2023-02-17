@@ -4,7 +4,7 @@
 
 ## 基本用法
 点击按钮打开遮照
-<de src="./demo-codes/demo.vue" ></de
+<demo src="./demo-codes/demo.vue" ></demo>
 
 
 ## Swiper 参数

@@ -6,6 +6,7 @@
   "types": "build/index.d.ts",
   "module": "build/index.js",
   "main": "build/index.umd.js",
+  "style": "build/style.css",
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",

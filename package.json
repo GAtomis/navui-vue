@@ -3,8 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "module": "build/dev-ui.js",
-  "main": "build/dev-ui.umd.js",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",

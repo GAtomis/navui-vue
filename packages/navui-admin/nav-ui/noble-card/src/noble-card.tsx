@@ -22,15 +22,10 @@ export default defineComponent({
     const InfoWrap = () => {
       return <div class={ns.e('info')} >sdasdsd</div>
     }
-
-
-
-
     return () => {
       return (
         <div class={wrapClass.value}>
-          {<></>}
-          {/* {<InfoWrap></InfoWrap>} */}
+          {<InfoWrap></InfoWrap>}
         </div>
       );
     };
