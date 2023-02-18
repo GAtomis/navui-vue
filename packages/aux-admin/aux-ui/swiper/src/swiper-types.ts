@@ -5,7 +5,7 @@ type Data ={
   id:string
 };
 
-type getOptions=(options:any)=>any
+type GetOptions=(options:any)=>any
 export const swiperProps = {
   data: {
     type: Array as PropType<Data[]>,
@@ -18,10 +18,19 @@ export const swiperProps = {
     })
   },
   getOptions:{
-    type :Function as PropType<getOptions>,
+    type :Function as PropType<GetOptions>,
     default:(opt:any)=>opt
   },
-  key:String//防止渲染问题
 } as const;
 
 export type SwiperProps = ExtractPropTypes<typeof swiperProps>;
+
+
+export const swiperItemProps={
+  src:{
+    type:String,
+    default:"https://avatars.githubusercontent.com/u/40788938?v=4"
+  }
+
+}as const;
+export type SwiperItemProps = ExtractPropTypes<typeof swiperItemProps>;

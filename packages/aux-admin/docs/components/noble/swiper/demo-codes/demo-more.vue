@@ -2,6 +2,9 @@
 <template>
   <div class="container">
     <AuxSwiper style="width:60%; height:100%;" :data="data" :get-options="getOptions" key="3">
+
+
+ 
     </AuxSwiper>
   </div>
 </template>

@@ -7,7 +7,7 @@ import overlayInstall, { Overlay } from "./overlay"
 import drawerInstall, { Drawer } from "./drawer"
 import nobleButtonInstall, { NobleButton } from './noble-button'
 import nobleCardInstall,{NobleCard} from "./noble-card"
-import nobleSwiperInstall,{Swiper} from "./swiper"
+import nobleSwiperInstall,{Swiper,SwiperItem} from "./swiper"
 import "./styles/global.scss"
 const installs = [
     GfgButtonInstall,
@@ -30,7 +30,8 @@ export {
     NobleButton,
     Drawer,
     NobleCard,
-    Swiper
+    Swiper,
+    SwiperItem
 }
 export default {
     verison: '0.0.1',
