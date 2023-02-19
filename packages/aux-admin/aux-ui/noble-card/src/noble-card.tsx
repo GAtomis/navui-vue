@@ -20,12 +20,21 @@ export default defineComponent({
       [ns.e("wrap")]: true
     }))
     const InfoWrap = () => {
-      return <div class={ns.e('info')} > {ctx.slots?.default?.()}</div>
+      return <div class={ns.e('info')} > {ctx.slots?.info?.()}</div>
+    }
+    const MediaWrap = () => {
+
+      return <div class={ns.e('media')} > {ctx.slots?.media?.()} </div>
     }
     return () => {
       return (
         <div class={wrapClass.value}>
-          {<InfoWrap></InfoWrap>}
+          {<InfoWrap></InfoWrap>
+          }
+          {
+            <MediaWrap></MediaWrap>
+          }
+          {ctx.slots?.default?.()}
         </div>
       );
     };

@@ -6,10 +6,26 @@
         display: flex;
         flex: 0 0 auto;
         width: 100%;
-        flex-direction: column-reverse;
+        flex-direction:column;
+        position: relative;
+    }
+    &__media{
+        display: block;
+        position: relative;
+        overflow: hidden;
     }
 
     &__info {
+        position: absolute;
+        // top: 0;
+        bottom: 0;
+        display: flex;
+        align-items: flex-end;
+        // z-index: 2;
+        background-color: transparent;
+        left: 0;
+        right: 0;
+        transition: .3s cubic-bezier(.39,.575,.565,1);
  
 
     }

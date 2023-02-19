@@ -92,8 +92,8 @@ export default defineComponent({
             {slots.default?.()??swiperItem()}
           </div>
           <div ref={paginationRef} style={params.value.pagination?.color && `--swiper-pagination-color:${params.value.pagination?.color};`} class="swiper-pagination"></div>
-          <div ref={prevRef} style={params.value.navigation?.color && `--swiper-navigation-color:${params.value.navigation?.color};`} class="swiper-button-prev"></div>
-          <div ref={nextRef} style={params.value.navigation?.color && `--swiper-navigation-color:${params.value.navigation?.color};`} class="swiper-button-next"></div>
+          <div ref={prevRef} style={params.value.navigation?.color && `--swiper-navigation-color:${params.value.navigation?.color};`} class="swiper-button-prev navigation" ></div>
+          <div ref={nextRef} style={params.value.navigation?.color && `--swiper-navigation-color:${params.value.navigation?.color};`} class="swiper-button-next navigation"></div>
           <div ref={scrollbarRef} class="swiper-scrollbar"></div>
         </div>
 

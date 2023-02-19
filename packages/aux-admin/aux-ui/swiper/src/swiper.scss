@@ -1,16 +1,47 @@
 // 引入主题变量
 @import '../../styles/global.scss';
 
-.#{$globa-prefix}-swiper {}
+.#{$globa-prefix}-swiper {
+    .navigation{
+        transition: opacity .3s cubic-bezier(.39,.575,.565,1);
+        opacity: 0;
+    }
+
+    &:hover{
+        .navigation{
+            opacity: 1;
+        }
+    }
+
+    &__item {
+        &--gradient {
+
+            img {
+                background: url(https://www.louisvuitton.cn/static_lvfront/product-card-gradients/gradient_default.svg) 0 0/cover no-repeat;
+            }
+        }
+        &--fitContain{
+
+            img{
+                object-fit: contain;
+            }
+        }
+
+
+
+    }
+}
+
 .swiper {
     width: 100%;
     height: 100%;
 }
 
-.swiper-button-next:after, .swiper-button-prev:after {
+.swiper-button-next:after,
+.swiper-button-prev:after {
     font-family: swiper-icons;
-    font-size: 18px!important;
-    text-transform: none!important;
+    font-size: 18px !important;
+    text-transform: none !important;
     letter-spacing: 0;
     font-variant: initial;
     line-height: 1;

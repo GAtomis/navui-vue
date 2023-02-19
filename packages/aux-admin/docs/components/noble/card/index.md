@@ -6,6 +6,10 @@
 点击按钮打开遮照
 <demo src="./demo-codes/demo.vue" ></demo>
 
+## LV官网goods效果
+点击按钮打开遮照
+<demo src="./demo-codes/demo-goods.vue" ></demo>
+
 
 ## Card 参数
 | 参数名 | 类型 | 默认值 | 说明 | 跳转 Demo |
