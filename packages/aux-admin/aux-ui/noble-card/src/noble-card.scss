@@ -10,20 +10,7 @@
     }
 
     &__info {
-        background-color: transparent;
-        left: 0;
-        right: 0;
-        transition: .3s cubic-bezier(.39, .575, .565, 1);
-        background: #fff;
-        padding: 10px 18px;
-
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        display: flex;
-        align-items: flex-end;
-        z-index: 2;
-
+ 
 
     }
 }

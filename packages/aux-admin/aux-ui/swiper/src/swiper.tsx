@@ -3,7 +3,7 @@ import type { SetupContext } from 'vue';
 import { swiperProps, SwiperProps } from './swiper-types';
 import './swiper.scss';
 import type { SwiperOptions } from 'swiper';
-import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
+import Swiper, { Navigation, Pagination, Autoplay,Scrollbar } from 'swiper';
 import { cloneDeep } from "lodash-es"
 // import Swiper and modules styles
 import "swiper/swiper-bundle.min.css";
@@ -26,7 +26,7 @@ export default defineComponent({
 
     const params = computed(() => {
       const params = cloneDeep({
-        modules: [Navigation, Pagination, Autoplay],
+        modules: [Navigation, Pagination, Autoplay,Scrollbar],
         // Optional parameters
         direction: 'horizontal',
         loop: true,
@@ -51,6 +51,8 @@ export default defineComponent({
         // And if we need scrollbar
         scrollbar: {
           el: scrollbarRef.value,
+          hide: true,
+          enabled: false
         }
       })
 
