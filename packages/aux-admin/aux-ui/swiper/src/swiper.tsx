@@ -22,7 +22,8 @@ export default defineComponent({
       nextRef = ref(),
       prevRef = ref(),
       paginationRef = ref(),
-      swiperRef = ref()
+      swiperRef = ref(),
+      wrapRef=ref<HTMLElement>()
 
     const params = computed(() => {
       const params = cloneDeep({
@@ -61,7 +62,7 @@ export default defineComponent({
 
     const navigationNext: SwiperEvent = (s) => {
 
-      emit('next',s,s.realIndex)
+      emit('next',s,s.realIndex,wrapRef?.value?.children[s.realIndex].attributes)
 
     }
     const navigationPrev: SwiperEvent = (s) => {
@@ -73,7 +74,7 @@ export default defineComponent({
 
     }
     const slideChange: SwiperEvent = (s) => {
-      emit('slide',s,s.realIndex)
+      emit('slide',s,s.realIndex,wrapRef?.value?.children[s.realIndex].attributes)
     }
 
     onMounted(() => {
@@ -82,13 +83,14 @@ export default defineComponent({
       swiper.on("navigationPrev", navigationPrev)
       swiper.on("beforeSlideChangeStart", beforeSlideChangeStart)
       swiper.on("slideChange", slideChange)
+      
 
     })
     const swiperItem = () => props.data.map(item => (<div class="swiper-slide"><img style={{ width: '100%', height: '100%' }} key={item.id} src={item.src} alt="" /></div>))
     return () => {
       return (
         <div class="aux-swiper swiper" ref={swiperRef}>
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper" ref={wrapRef}>
             {slots.default?.()??swiperItem()}
           </div>
           <div ref={paginationRef} style={params.value.pagination?.color && `--swiper-pagination-color:${params.value.pagination?.color};`} class="swiper-pagination"></div>

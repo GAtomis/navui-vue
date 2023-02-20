@@ -2,8 +2,8 @@
 <template>
   <div class="container">
     <AuxNobleCard class="content">
-      <AuxSwiper @slide="slideCb" :get-options="getOptions">
-        <AuxSwiperItem :ishidden="item.id" class="goods-bg" v-for="item, index of data" :key="item.id" :src="item.src">
+      <AuxSwiper @slide="slideCb" :get-options="getOptions" >
+        <AuxSwiperItem :ishidden="item" class="goods-bg" v-for="item, index of data" :key="item.id" :src="item.src">
         </AuxSwiperItem>
       </AuxSwiper>
 
@@ -12,9 +12,6 @@
         <p>$ 233</p>
       </div>
     </AuxNobleCard>
-
-
-
   </div>
 </template>
 <script lang="ts" setup>
@@ -36,6 +33,8 @@ const data = ref<SwiperProps['data']>([
 const getOptions = (swiper) => {
   swiper.speed = 600
   swiper.navigation.color = "#19110b"
+  console.log(swiper);
+  
   return swiper
 }
 
@@ -55,8 +54,6 @@ const getOptions = (swiper) => {
   flex: auto;
   width: 100%;
 }
-
-
 
 
 .container .info p {

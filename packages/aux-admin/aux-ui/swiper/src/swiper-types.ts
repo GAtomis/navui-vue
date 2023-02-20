@@ -3,6 +3,7 @@ type Data ={
   src:string
   title:string
   id:string
+  [key: string]: any
 };
 
 type GetOptions=(options:any)=>any
