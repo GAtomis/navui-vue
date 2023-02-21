@@ -1,4 +1,65 @@
 // 引入主题变量
 @import '../../styles/global.scss';
+
 .#{$globa-prefix}-noble-collapse {
+
+    position: relative;
+}
+
+
+.#{$globa-prefix}-noble-collapse-item {
+    position: relative;
+    --aux-collapse-header-height: 48px;
+    --aux-collapse-header-text-color: var(--axu-text-contrast-color)
+    --aux-collapse-header-bg-color: var(--aux-fill-color-blank);
+    --aux-collapse-content-bg-color:var(--aux-fill-color-blank);
+    --aux-collapse-border-color: var(--aux-border-color-lighter);
+    --aux-collapse-header-font-size: 13px;
+
+    border-top: 1px solid var(--aux-collapse-border-color);
+    border-bottom: 1px solid var(--aux-collapse-border-color);
+
+    &__header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: var(--aux-collapse-header-height);
+        line-height: var(--aux-collapse-header-height);
+        background-color: var(--aux-collapse-header-bg-color);
+        color: var(--aux-collapse-header-text-color);
+        cursor: pointer;
+        border-bottom: 1px solid var(--aux-collapse-border-color);
+        font-size: var(--aux-collapse-header-font-size);
+        font-weight: 500;
+        transition: border-bottom-color var(--aux-transition-duration);
+        outline: none;
+        &.is-active{
+            border-bottom-color: transparent;
+        }
+    }
+
+    &__arrow {
+        margin: 0 8px 0 auto;
+        transition: transform var(--aux-transition-duration);
+        font-weight: 300;
+        position: relative;
+        &.is-active {
+            transform: rotate(90deg);
+        }
+
+    }
+    &__expandable{
+        will-change: height;
+        background-color: var(--aux-collapse-content-bg-color);
+        overflow: hidden;
+        box-sizing: border-box;
+        border-bottom: 1px solid var(--aux-collapse-border-color);
+    }
+    .is-active {
+     
+
+    }
+
+   
+   
 }

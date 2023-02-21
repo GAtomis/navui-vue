@@ -1,4 +1,5 @@
 @import './font.scss';
+@import './icon.scss';
 $globa-prefix: aux;
 
 :root {
@@ -12,10 +13,15 @@ $globa-prefix: aux;
   --fontsm: 1.125em; //18 px
   --fontxs: 1em; //16 px
   --fontxxs: 0.75em; //12 px
-  --aux-line-background:#fff;
+  --aux-border-color-lighter:#eee;
   --aux-text-color:#fff;
+  --aux-text-color-primary: #303133;
+  --axu-text-contrast-color:#000;
   --aux-hover-text-color:#eee;
   --aux-not-allowed-color:#666666;
+  --aux-fill-color-blank:#fff;
+  --aux-transition-duration:.3s;
+
 
   // Colors
   --dark: #000000;

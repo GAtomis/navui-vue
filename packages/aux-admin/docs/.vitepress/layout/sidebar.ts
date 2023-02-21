@@ -31,10 +31,12 @@ const sidebar = {
                 },
                 {
                     text: 'Card', link: '/components/noble/card/'
-                },
-                
+                },               
                 {
                     text: 'Swiper', link: '/components/noble/swiper/'
+                },     
+                {
+                    text: 'Collapse', link: '/components/noble/collapse/'
                 },
                 
             ]

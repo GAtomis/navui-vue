@@ -8,6 +8,8 @@ import drawerInstall, { Drawer } from "./drawer"
 import nobleButtonInstall, { NobleButton } from './noble-button'
 import nobleCardInstall,{NobleCard} from "./noble-card"
 import nobleSwiperInstall,{Swiper,SwiperItem} from "./swiper"
+import nobleCollapseInstall ,{NobleCollapse,NobleCollapseItem} from './noble-collapse'
+import collapseTransitionInstall ,{CollapseTransition} from './collapse-transition'
 import "./styles/global.scss"
 const installs = [
     GfgButtonInstall,
@@ -18,7 +20,9 @@ const installs = [
     drawerInstall,
     nobleButtonInstall,
     nobleCardInstall,
-    nobleSwiperInstall
+    nobleSwiperInstall,
+    nobleCollapseInstall,
+    collapseTransitionInstall
 ]
 
 export {
@@ -31,7 +35,10 @@ export {
     Drawer,
     NobleCard,
     Swiper,
-    SwiperItem
+    SwiperItem,
+    NobleCollapse,
+    NobleCollapseItem,
+    CollapseTransition
 }
 export default {
     verison: '0.0.1',

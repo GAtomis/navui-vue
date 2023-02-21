@@ -1,0 +1,24 @@
+// 引入主题变量
+@import '../../styles/global.scss';
+
+.#{$globa-prefix}-collapse-transition {}
+
+
+.collapse-transition {
+  transition: var(--aux-transition-duration,3s) height ease-in-out,
+    var(--aux-transition-duration,3s) padding-top ease-in-out,
+    var(--aux-transition-duration,3s) padding-bottom ease-in-out;
+}
+
+.#{$globa-prefix}-collapse-transition-leave-active,
+.#{$globa-prefix}-collapse-transition-enter-active {
+  transition: var(--aux-transition-duration,.3s) max-height ease-in-out,
+    var(--aux-transition-duration,3s) padding-top ease-in-out,
+    var(--aux-transition-duration,3s) padding-bottom ease-in-out;
+}
+
+.horizontal-collapse-transition {
+  transition: var(--aux-transition-duration,3s) width ease-in-out,
+    var(--aux-transition-duration,3s) padding-left ease-in-out,
+    var(--aux-transition-duration,3s) padding-right ease-in-out;
+}

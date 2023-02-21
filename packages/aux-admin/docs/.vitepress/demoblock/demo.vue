@@ -8,8 +8,7 @@
     </div>
     <!-- 代码展示 -->
 
-
-
+    <aux-collapse-transition>
       <div class="demo-show" v-show="isExpanded">
         <!-- 描述 -->
         <div class="demo-show_desc" v-show="decodedDesc" v-html="decodedDesc"></div>
@@ -18,8 +17,7 @@
         <!-- 代码 -->
         <div :class="['demo-show-code', 'language-' + language]" v-html="decodedHtmlStr"></div>
       </div>
-
-
+    </aux-collapse-transition>
     <!-- 按钮控制 -->
     <div class="demo-control" @click="onClickControl">
 

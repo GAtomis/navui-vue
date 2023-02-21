@@ -2,16 +2,17 @@
 <template>
   <div class="container">
     <aux-noble-collapse v-model="active">
-      <aux-noble-collapse-item name="1" title="what">
+      <aux-noble-collapse-item name="1">
       </aux-noble-collapse-item>
-      <aux-noble-collapse-item name="2" title="asds">
+      <aux-noble-collapse-item name="2">
       </aux-noble-collapse-item>
     </aux-noble-collapse>
   </div>
 </template>
 <script lang="ts" setup>
 import { computed, ref } from 'vue';
-
+import { NobleCollapse as AuxNobleCollapse, NobleCollapseItem as AuxNobleCollapseItem } from "../../../../../aux-ui/main"
+// import type { SwiperProps } from "../../../../../aux-ui/swiper"
 
 const active = ref(['1'])
 
