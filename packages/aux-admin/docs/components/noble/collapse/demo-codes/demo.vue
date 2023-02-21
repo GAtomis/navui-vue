@@ -2,9 +2,9 @@
 <template>
   <div class="container">
     <aux-noble-collapse v-model="active">
-      <aux-noble-collapse-item name="1">
+      <aux-noble-collapse-item title="title1" name="1">
       </aux-noble-collapse-item>
-      <aux-noble-collapse-item name="2">
+      <aux-noble-collapse-item title="title2" name="2">
       </aux-noble-collapse-item>
     </aux-noble-collapse>
   </div>

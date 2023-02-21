@@ -99,7 +99,7 @@ const [good,swiper,index,attr]=params
   padding: 5px 8px;
 }
 
-.good-bg img {
+.good-bg  {
 
   background: url(https://www.louisvuitton.cn/static_lvfront/product-card-gradients/gradient_default.svg) 0 0/cover no-repeat;
 }
