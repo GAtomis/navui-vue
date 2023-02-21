@@ -10,18 +10,21 @@ export default function (props: NobleButtonProps, ctx: SetupContext) {
    const  classes  =computed(()=>{
 
     return {
-        [gs.m('underline')]:props.underline,
+        [gs.m('underline')]:!props.disabled&&props.underline,
         [ns.b()]:true,
         [ns.m('transparent')]:true,
         [ns.m('center')]:true,
         [ns.m('round')]:props.round,
         [ns.m('circle')]:props.circle,
+        [ns.m('enabled')]:!props.disabled,
+        [ns.m('disabled')]:props.disabled
     }
    })
+  const color =computed(()=>props.disabled?"#b3a7a7":props.color)
  
    
 
-   return {classes,gs,ns}
+   return {classes,gs,ns,color}
 
 
 

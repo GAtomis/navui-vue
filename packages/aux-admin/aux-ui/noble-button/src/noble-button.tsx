@@ -12,8 +12,8 @@ export default defineComponent({
     // 直接解构 props 会导致响应式失效，需要使用 toRefs 进行包裹
     // const { data } = toRefs(props);
     // console.log(data.value);
-    const {classes} =useButton(props,ctx as SetupContext)
+    const {classes,color} =useButton(props,ctx as SetupContext)
 
-    return () =><button style={props.color&&`--aux-text-color:${props.color}`} class={classes.value }>{ctx.slots.default?.() ?? "noble-button"}</button>
+    return () =><button disabled={props.disabled} style={color.value&&`--aux-text-color:${color.value}`} class={classes.value }>{ctx.slots.default?.() ?? "noble-button"}</button>
   }
 });

@@ -15,7 +15,6 @@ export const swiperProps = {
   params:{
     type :Object as PropType<any>,
     default:()=>({
-
     })
   },
   getOptions:{
@@ -25,13 +24,10 @@ export const swiperProps = {
 } as const;
 
 export type SwiperProps = ExtractPropTypes<typeof swiperProps>;
-
-
 export const swiperItemProps={
   src:{
     type:String,
     default:"https://avatars.githubusercontent.com/u/40788938?v=4"
   }
-
 }as const;
 export type SwiperItemProps = ExtractPropTypes<typeof swiperItemProps>;

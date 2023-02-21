@@ -1,6 +1,6 @@
 // 引入主题变量
 @import '../../styles/global.scss';
-
+@import url("swiper/swiper-bundle.min.css");
 .#{$globa-prefix}-swiper {
     .navigation{
         transition: opacity .3s cubic-bezier(.39,.575,.565,1);
@@ -23,12 +23,9 @@
         &--fitContain{
 
             img{
-                object-fit: contain;
+                // object-fit: contain;
             }
         }
-
-
-
     }
 }
 

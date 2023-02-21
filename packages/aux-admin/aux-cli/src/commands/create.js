@@ -3,7 +3,7 @@ import { red } from 'kolorist'
 import { createFolder } from './createFolder'
 const CREATE_TYPES = ['component', 'lib-entry']
 
-const DOCS_CATEGORIES = ['通用', '导航', '数据录入', '数据展示', '布局']
+const DOCS_CATEGORIES = ['LV Style','通用', '导航', '数据录入', '数据展示', '布局']
 
 
 

@@ -11,23 +11,18 @@ export default defineComponent({
     // const { data } = toRefs(props);
     // console.log(data.value);
     const ns =useNamespace('swiper__item')
-
     const classes= computed(()=>({
       [ns.m('gradient')]:!true,
       [ns.b()]:true,
       [ns.m('fitContain')]:true,
       ['swiper-slide']:true
-
-
-
     }))
     return () => {
       return (
         <div  class={classes.value} >
           {ctx.slots.default?.({
             text:'AuxSwiperItem'
-          })??<img style={ {width: '100%', height: '100%' }} key="1" src={props.src} alt="" />}  
-       
+          })??<img style={ {width: '100%', height: '100%' }}  src={props.src} alt="" />}      
         </div>
 
       );

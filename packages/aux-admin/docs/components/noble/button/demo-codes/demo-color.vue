@@ -1,7 +1,7 @@
 
 <template>
   <div class="container">
-    <aux-noble-button color="red" >
+    <aux-noble-button color="rgba(0,0,0,.4)" >
       <span>加入购物</span>
     </aux-noble-button>
     <aux-noble-button  color="yellow" underline round>

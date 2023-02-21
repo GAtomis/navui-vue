@@ -7,6 +7,9 @@
     <aux-noble-button >
       <span>即可订购</span>
     </aux-noble-button>
+    <aux-noble-button  disabled>
+      <span>禁止</span>
+    </aux-noble-button>
   </div>
 </template>
 <script lang="ts" setup>

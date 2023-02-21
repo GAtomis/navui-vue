@@ -20,10 +20,11 @@
 ## Button 参数
 | 参数名 | 类型 | 默认值 | 说明 | 跳转 Demo |
 | :---- | :---- | :---- | :---- | :--------- |
-|  round    | Boolean  |   false   |   倒圆角边   |     [多种样式按钮](#多种样式按钮)      |
+|  round    | Boolean  |   false   |   倒圆角边   | [多种样式按钮](#多种样式按钮)      |
 |  circle    | Boolean  |   false   |   圆形   |     [多种样式按钮](#多种样式按钮)      |
-|  underline    | Boolean  |   false   |   下划线按钮   |     [带下划线的按钮](#带下划线的按钮)      |
-|  color    | string  |   #fff   |   颜色支持rgb,16进制   |     [自定义颜色按钮](#自定义颜色按钮)      |
+|  underline    | Boolean  |   false   |   下划线按钮   |[带下划线的按钮](#带下划线的按钮)      |
+|  color    | string  |   #fff   |   颜色支持rgb,16进制   | [自定义颜色按钮](#自定义颜色按钮)      |
+|  disabled    | Boolean  |   false   |  是否禁用 |[基本用法](#基本用法)|
 ## Button 插槽
 | 插槽名 | 说明 | 跳转 Demo |
 | :---- | :---- | :--------- |

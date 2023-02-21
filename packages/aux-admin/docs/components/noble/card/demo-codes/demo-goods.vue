@@ -4,8 +4,7 @@
     <AuxNobleCard class="content" v-for="good,goodNumber of goods" :key="goodNumber">
       <template #media>
         <AuxSwiper @slide="(...attr) => slideCb(good,...attr)" :get-options="getOptions" >
-          <AuxSwiperItem  :key="item.id" class="good-bg"  v-for="item,index of good.list">
-            <img :src="item.src" alt="">
+          <AuxSwiperItem  :src="item.src" :key="item.id" class="good-bg"  v-for="item,index of good.list">
           </AuxSwiperItem>
         </AuxSwiper>
       </template>
@@ -63,7 +62,6 @@ const getOptions = (swiper) => {
   swiper.pagination.enabled=false
   return swiper
 }
-const currentIndex = ref(1)
 const slideCb = (...params) => {
 const [good,swiper,index,attr]=params
   // console.log(good.list[]);

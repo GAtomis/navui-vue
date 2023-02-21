@@ -23,7 +23,6 @@ export default defineComponent({
       return <div class={ns.e('info')} > {ctx.slots?.info?.()}</div>
     }
     const MediaWrap = () => {
-
       return <div class={ns.e('media')} > {ctx.slots?.media?.()} </div>
     }
     return () => {

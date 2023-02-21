@@ -2,7 +2,7 @@
 <template>
   <div class="container">
     <AuxNobleCard class="content">
-      <AuxSwiper @slide="slideCb" :get-options="getOptions" >
+      <AuxSwiper :get-options="getOptions" >
         <AuxSwiperItem :ishidden="item" class="goods-bg" v-for="item, index of data" :key="item.id" :src="item.src">
         </AuxSwiperItem>
       </AuxSwiper>
@@ -57,7 +57,7 @@ const getOptions = (swiper) => {
 
 
 .container .info p {
-  font-size: 40%;
+  font-size: 100%;
   padding: 0;
   margin: 0;
   font-weight: 600;

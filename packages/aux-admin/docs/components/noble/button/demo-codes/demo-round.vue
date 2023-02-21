@@ -5,7 +5,8 @@
       <span>加入购物</span>
     </aux-noble-button>
     <aux-noble-button  round>
-      <span>即可订购</span>
+      <span>筛选</span>
+      <i class="iconfont icon-control1"></i>
     </aux-noble-button>
     <aux-noble-button  circle>
       <i class="iconfont icon-shopping-cart-fill"></i>
@@ -22,7 +23,11 @@ const words = ref("So do i")
 </script>
 <style scoped>
 
-@import url(//at.alicdn.com/t/c/font_3882013_ongjfg9mkdo.css);
+@import url(//at.alicdn.com/t/c/font_3882013_q5u06iila8.css);
+.icon-control1{
+  font-size: 20px;
+  margin-left: 5px;
+}
 .container {
   min-height: 100px;
   display: flex;

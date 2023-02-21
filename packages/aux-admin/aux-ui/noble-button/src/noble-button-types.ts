@@ -7,7 +7,11 @@ export const nobleButtonProps = {
   color:{
     type:String,
     default:""
-  }
+  },
+  disabled: {
+    type: Boolean,
+    default: false,
+  },
 } as const;
 
 export type NobleButtonProps = ExtractPropTypes<typeof nobleButtonProps>;
