@@ -8,7 +8,9 @@
 
 
 .#{$globa-prefix}-noble-collapse-item {
+    // overflow: hidden;
     position: relative;
+    margin-top:-1px;
     --aux-collapse-header-height: 48px;
     --aux-collapse-header-text-color: var(--axu-text-contrast-color)
     --aux-collapse-header-bg-color: var(--aux-fill-color-blank);
@@ -25,12 +27,13 @@
         align-items: center;
         height: var(--aux-collapse-header-height);
         line-height: var(--aux-collapse-header-height);
-        background-color: var(--aux-collapse-header-bg-color);
+        // background-color: var(--aux-collapse-header-bg-color);
         color: var(--aux-collapse-header-text-color);
         cursor: pointer;
         border-bottom: 1px solid var(--aux-collapse-border-color);
         font-size: var(--aux-collapse-header-font-size);
-        font-weight: 500;
+        font-weight: 600;
+        font-size: 16px;
         transition: border-bottom-color var(--aux-transition-duration);
         outline: none;
         &.is-active{
@@ -44,21 +47,18 @@
         font-weight: 300;
         position: relative;
         &.is-active {
-            transform: rotate(90deg);
+            transform: rotate(180deg);
         }
 
     }
     &__expandable{
         will-change: height;
-        background-color: var(--aux-collapse-content-bg-color);
+        // background-color: var(--aux-collapse-content-bg-color);
         overflow: hidden;
         box-sizing: border-box;
         border-bottom: 1px solid var(--aux-collapse-border-color);
     }
-    .is-active {
-     
 
-    }
 
    
    

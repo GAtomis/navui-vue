@@ -38,7 +38,11 @@ export const useCollapse = (
 
     watch(
         () => props.modelValue,
-        () => (activeNames.value = castArray(props.modelValue)),
+        (newVal) => {
+            console.warn(newVal);
+            
+            activeNames.value = castArray(props.modelValue)
+        },
         { deep: true }
     )
 

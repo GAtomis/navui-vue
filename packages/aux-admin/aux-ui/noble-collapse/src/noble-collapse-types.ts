@@ -1,28 +1,31 @@
-import type { PropType, ExtractPropTypes,Ref } from 'vue';
-export type Model= string|number
+import type { PropType, ExtractPropTypes, Ref } from 'vue';
+export type Model = string | number
+export type Arrayable<T> = T | T[]
+
 export const nobleCollapseProps = {
   accordion: {
-    type:Boolean,
+    type: Boolean,
     default: false
   },
-  modelValue:{
-    type:Array as PropType<Model[]>,
-    default:['0'],
-    required:true
+  modelValue: {
+    type: [Array,Number,String] as PropType<Arrayable<Model>> ,
+    default: [],
+    required: true
 
   }
 } as const;
 
 export type NobleCollapseProps = ExtractPropTypes<typeof nobleCollapseProps>;
-
-
 export const nobleCollapseItemProps = {
-  name:{
-    type:String,
-    required:true
+  name: {
+    type: String,
+    required: true
   },
-  title:String,
-  disabled:Boolean
+  title: String,
+  disabled: {
+    type: Boolean,
+    default: false
+  }
 } as const;
 
 export type NobleCollapseItemProps = ExtractPropTypes<typeof nobleCollapseItemProps>;

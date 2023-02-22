@@ -17,6 +17,8 @@ export const useCollapseItem = (props: NobleCollapseItemProps, ctx: SetupContext
         collapse?.activeNames.value.includes(props.name)
     )
     const handleFocus = () => {
+        console.log(isClick.value,focusing.value );
+        
         setTimeout(() => {
             if (!isClick.value) {
                 focusing.value = true
@@ -26,24 +28,24 @@ export const useCollapseItem = (props: NobleCollapseItemProps, ctx: SetupContext
         }, 50)
     }
     const handleHeaderClick = (e:MouseEvent) => {
-        console.log(e);
-        
+        // console.log(isClick.value,focusing.value );
         if (props.disabled) return
         collapse?.handleItemClick(props.name)
         focusing.value = false
         isClick.value = true
     }
 
-    // const handleEnterClick = () => {
-    //   collapse?.handleItemClick(props.name)
-    // }
+    const handleEnterClick = () => {
+
+      collapse?.handleItemClick(props.name)
+    }
 
     return {
         handleHeaderClick,
         handleFocus, 
+        handleEnterClick,
         isActive, 
         id, 
-        isClick, 
         focusing, 
         collapse
     }

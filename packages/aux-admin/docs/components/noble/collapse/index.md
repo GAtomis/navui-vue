@@ -6,28 +6,50 @@
 折叠板
 <demo src="./demo-codes/demo.vue" ></demo>
 
+## 手风琴
+永远只会打开一个拓展窗口
+<demo src="./demo-codes/demo-accordion.vue" ></demo>
+
+## 自定义内容
+通过插槽来实现自定义内容
+<demo src="./demo-codes/demo-custom.vue" ></demo>
+
 
 
 ## Collapse 参数
 | 参数名 | 类型 | 默认值 | 说明 | 跳转 Demo |
 | :---- | :---- | :---- | :---- | :--------- |
-|  后续补充功能    |   |      |      ||           |
-
+| modelValue/v-model| Array<string|number>| []| 手风琴为string 默认模式Array| |           
+| accordion| Boolean| false| 手风琴模式 默认单选展开| [手风琴](#手风琴)|           
 
 ## Collapse 事件
 | 事件名 | 说明 | 参数 |
 | :---- | :---- | :--------- |
-| 暂无  | ||
+| change  |当前激活面板改变时触发(如果是手风琴模式，参数 activeNames 类型为string，否则为array) | (activeNames: array (non-accordion mode) / string (accordion mode))|
 
 
 ## Collapse 插槽
 | 插槽名 | 说明 | 跳转 Demo |
 | :---- | :---- | :--------- |
 | default |任意内容 |可以随意写想要卡片内|
-| media |媒体图片 |[链接](#lV官网goods效果)|
-| info |文案信息 |[链接](#lV官网goods效果)|
 
 
 
+## Collapse Item 参数
+| 参数名 | 类型 | 默认值 | 说明 | 跳转 Demo |
+| :---- | :---- | :---- | :---- | :--------- |
+| name| string|  - |唯一标志符 | -|           
+| title| string| -| 头部名称| -|   
+|disabled|boolean|false|是否禁用||
+
+  name: {
+    type: String,
+    required: true
+  },
+  title: String,
+  disabled: {
+    type: Boolean,
+    default: false
+  }
 
 
