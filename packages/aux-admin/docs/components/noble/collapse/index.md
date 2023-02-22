@@ -40,16 +40,12 @@
 | :---- | :---- | :---- | :---- | :--------- |
 | name| string|  - |唯一标志符 | -|           
 | title| string| -| 头部名称| -|   
-|disabled|boolean|false|是否禁用||
+|disabled|boolean|false|是否禁用|-|
 
-  name: {
-    type: String,
-    required: true
-  },
-  title: String,
-  disabled: {
-    type: Boolean,
-    default: false
-  }
 
+## Collapse Item插槽
+| 插槽名 | 说明 | 跳转 Demo |
+| :---- | :---- | :--------- |
+| default |拓展内容 |-|
+| title |头部标题 |-|
 
