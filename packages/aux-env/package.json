@@ -10,8 +10,9 @@
   },
   "dependencies": {
     "@ant-design/icons-vue": "^6.1.0",
-    "@library/aux-admin": "workspace:^0.0.1",
+    "aux-ui": "^0.0.1-alpha.1",
     "reset-css": "^5.0.1",
+    "@library/aux-admin": "workspace:^0.0.1",
     "sass": "1.58.1",
     "swiper": "^9.0.5",
     "vue": "^3.2.47"

@@ -1,7 +1,9 @@
 
 # GlowButton
 发光的按钮 在夜间模式下有非常酷
-
+:::tip
+项目中的皆为本地使用路径,自己项目使用请根据[快速开始](/guide/quick-start/)中操作使用
+:::
 ## 基本用法
 如下
 <demo src="./demo-codes/demo.vue" desc="通过color修改颜色属性"></demo>

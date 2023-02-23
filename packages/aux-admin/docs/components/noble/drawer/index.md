@@ -1,7 +1,9 @@
 
 # Drawer 抽屉
 官网上用了很多抽屉的功能这里直接封装了一个抽屉直接调用api使用
-
+:::tip
+项目中的皆为本地使用路径,自己项目使用请根据[快速开始](/guide/quick-start/)中操作使用
+:::
 ## 基本用法
 点击按钮打开Drawer
 <demo src="./demo-codes/demo.vue" ></demo>

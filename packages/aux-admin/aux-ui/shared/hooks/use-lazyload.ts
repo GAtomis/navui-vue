@@ -1,7 +1,7 @@
 
 
 
-export function useLazyload(eles: NodeListOf<Element>) {
+export function useLazyload(eles: NodeListOf<Element>=document.querySelectorAll('img[data-src]')) {
     var viewHeight = document.documentElement.clientHeight;  // 可视化区域的高度
     var viewWidth = document.documentElement.clientWidth; // 可视化区域的宽度
     // console.log('获取所有的信息', eles)

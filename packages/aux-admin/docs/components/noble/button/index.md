@@ -1,8 +1,10 @@
 
 # Button 按钮
-
-
+:::tip
+项目中的皆为本地使用路径,自己项目使用请根据[快速开始](/guide/quick-start/)中操作使用
+:::
 ## 基本用法
+展示基本lv风格的按钮 包含了禁止状态
 <demo src="./demo-codes/demo.vue" desc="基本样式按钮"></demo>
 
 ## 多种样式按钮

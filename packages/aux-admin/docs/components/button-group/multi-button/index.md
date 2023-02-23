@@ -1,7 +1,9 @@
 
 # MultiButton 
 多种类按钮
-
+:::tip
+项目中的皆为本地使用路径,自己项目使用请根据[快速开始](/guide/quick-start/)中操作使用
+:::
 ## 基本用法
 通过默认插槽插入文字或者图片
 <demo src="./demo-codes/demo.vue" desc="通过默认插槽插入文字或者图片"></demo>

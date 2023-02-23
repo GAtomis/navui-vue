@@ -1,7 +1,9 @@
 
 # Card 卡片
 商城卡片
-
+:::tip
+项目中的皆为本地使用路径,自己项目使用请根据[快速开始](/guide/quick-start/)中操作使用
+:::
 ## 基本用法
 点击按钮打开遮照
 <demo src="./demo-codes/demo.vue" ></demo>

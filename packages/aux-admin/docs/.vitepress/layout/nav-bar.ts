@@ -12,7 +12,7 @@ const navBar = [
   {
     text: '组件',
     activeMatch: `^/components/`,
-    link: '/components/button/gfg-button/'
+    link: '/components/noble/button/'
   },
   { text: "🔗 Github", link: "https://github.com/GAtomis/navui-vue" },
 ]

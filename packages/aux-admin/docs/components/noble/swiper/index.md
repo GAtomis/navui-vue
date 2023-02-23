@@ -1,7 +1,9 @@
 
 # Swiper 轮播
 商品轮播图,基于Swiperjs开发
-
+:::tip
+项目中的皆为本地使用路径,自己项目使用请根据[快速开始](/guide/quick-start/)中操作使用
+:::
 ## 基本用法
 根据轮播图的大小来控制轮播尺寸, 通过data传入轮播参数
 <demo src="./demo-codes/demo.vue" key="1" ></demo>
