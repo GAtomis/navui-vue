@@ -1,7 +1,7 @@
 # 简介
 Aux-ui 是个基于Vue3开发的UI组件库,其中组件内容包含的一些现在主流设计网站和某些特色官网的ui设计带来的灵感。没有特定主题和没有固定模式是它灵魂所在
 ::: tip
-由于 Vue 3 不再支持 IE11，Element Plus 也不再支持 IE 浏览器。
+由于 Vue 3 不再支持 IE11，aux-ui 也不再支持 IE 浏览器。
 :::
 <div class="vp-table"><table><thead><tr><th><img src="https://cdn.jsdelivr.net/npm/@browser-logos/edge/edge_32x32.png" alt=""></th><th><img src="https://cdn.jsdelivr.net/npm/@browser-logos/firefox/firefox_32x32.png" alt=""></th><th><img src="https://cdn.jsdelivr.net/npm/@browser-logos/chrome/chrome_32x32.png" alt=""></th><th><img src="https://cdn.jsdelivr.net/npm/@browser-logos/safari/safari_32x32.png" alt=""></th></tr></thead><tbody><tr><td>Edge ≥ 79</td><td>Firefox ≥ 78</td><td>Chrome ≥ 64</td><td>Safari ≥ 12</td></tr></tbody></table></div>
 
