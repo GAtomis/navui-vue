@@ -13,6 +13,5 @@
 - 🔥 Written in TypeScript
 
 ## Getting Started
-
-    详情文档了解点击文档查看 [Getting Started](https://gatomis.github.io/aux-ui-docs/).
+详情文档了解点击文档查看 [Getting Started](https://gatomis.github.io/aux-ui-docs/).
 
