@@ -1,6 +1,5 @@
-### 使用备忘录
+### aux-ui文档
 
-> ./config 配置文件
-
+> 
 
 ### swiper bug
