@@ -7,10 +7,13 @@
     <aux-noble-button  disabled>
       <span>禁止</span>
     </aux-noble-button>
+    <aux-noble-button type="primary"   fill>
+      <span>主要按钮</span>
+    </aux-noble-button>
     <aux-noble-button type="success"   fill>
       <span>登陆微信</span>
     </aux-noble-button>
-    <aux-noble-button type="primary"   fill>
+    <aux-noble-button type="confirm"   fill>
       <span>确认购买</span>
     </aux-noble-button>
   </div>

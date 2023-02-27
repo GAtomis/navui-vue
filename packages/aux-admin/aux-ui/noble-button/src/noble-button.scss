@@ -11,9 +11,10 @@
     transition: border .3s cubic-bezier(.39,.575,.565,1),box-shadow .3s cubic-bezier(.39,.575,.565,1),color .3s cubic-bezier(.39,.575,.565,1),background .3s cubic-bezier(.39,.575,.565,1),box-shadow .3s cubic-bezier(.39,.575,.565,1);
     --aux-nb-text-color:var(--aux-text-color);
     --aux-nb-bg-color:var(--aux-text-contrast-color);
-    --aux-ng-border:var(--aux--border);
+    --aux-ng-border:var(--aux-border);
     --aux-nb-hover-bg-color:var(--aux-hover-bg-color);
     --aux-nb-hover-text-color:var(--aux-hover-text-color);
+    --aux-nb-hover-border:var(aux-hover-border);
     &.#{$globa-prefix}--underline span {
         background-image: linear-gradient(var(--aux-nb-text-color,#fff),var(--aux-nb-text-color,#fff))!important
     }
@@ -37,6 +38,7 @@
             background-color: var(--aux-nb-hover-bg-color);
             color:var( --aux-nb-hover-text-color) ;
             cursor: pointer;
+            border:var(--aux-nb-hover-border)
         }
         &.disabled{
             cursor: not-allowed;
@@ -47,7 +49,8 @@
             --aux-ng-border:var(--aux-primary-border);
             --aux-nb-font-weight:var(--aux-text-weight);   
             --aux-nb-hover-bg-color:var(--aux-hover-primary-bg-color);
-            --aux-nb-hover-text-color:var(--aux-hover-primary-text-color);                 
+            --aux-nb-hover-text-color:var(--aux-hover-primary-text-color);   
+            --aux-nb-hover-border:var(--aux-hover-primary-border) ;             
         }
         &.confirm{
             --aux-nb-text-color:var(--aux-text-confirm-color);
@@ -55,7 +58,9 @@
             --aux-ng-border:var(--aux-confirm-border);
             --aux-nb-font-weight:var(--aux-text-weight);
             --aux-nb-hover-bg-color:var(--aux-text-confirm-color);
-            --aux-nb-hover-text-color:var(--aux-text-contrast-confirm-color);    
+            --aux-nb-hover-text-color:var(--aux-text-contrast-confirm-color); 
+            --aux-nb-hover-border:var(--aux-hover-confirm-border) ;  
+               
         }
         &.success{
             --aux-nb-text-color:var(--aux-text-success-color);
@@ -63,7 +68,9 @@
             --aux-ng-border:var(--aux-success-border);
             --aux-nb-font-weight:var(--aux-text-weight);
             --aux-nb-hover-bg-color:var(--aux-text-contrast-success-color);
-            --aux-nb-hover-text-color:var(--aux-text-success-color);    
+            --aux-nb-hover-text-color:var(--aux-text-success-color);  
+            --aux-nb-hover-border:var(--aux-hover-success-border) ;  
+                 
         }
     }
     &--circle{

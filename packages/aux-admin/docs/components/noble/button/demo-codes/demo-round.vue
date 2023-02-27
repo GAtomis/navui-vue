@@ -11,6 +11,9 @@
     <aux-noble-button  circle>
       <i class="iconfont icon-shopping-cart-fill"></i>
     </aux-noble-button>
+    <aux-noble-button  circle fill>
+      <i class="iconfont icon-shopping-cart-fill"></i>
+    </aux-noble-button>
   </div>
 </template>
 <script lang="ts" setup>

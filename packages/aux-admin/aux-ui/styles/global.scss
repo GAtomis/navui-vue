@@ -22,12 +22,14 @@ $globa-prefix: aux;
   --aux-text-weight:400;
   --aux-hover-text-color:#000;
   --aux-hover-bg-color:#eae8e4;
+  --aux-hover-border:var(--aux-text-color);
 
-  --aux-text-primary-color: #fff;
+  --aux-text-primary-color:#fff;
   --aux-text-contrast-primary-color:#000;
   --aux-primary-border:0.0625rem solid var(--aux-text-contrast-primary-color);
   --aux-hover-primary-text-color:#000;
   --aux-hover-primary-bg-color:#eae8e4;
+  --aux-hover-primary-border:0.0625rem solid var(--aux-text-primary-color);
   --aux-active-primary-text-color:#529b2e;
   --aux-active-primary-bg-color:#95d475;
   
@@ -36,14 +38,16 @@ $globa-prefix: aux;
   --aux-success-border:0.0625rem solid var(--aux-text-contrast-success-color);
   --aux-hover-success-text-color:#ffffff;
   --aux-hover-success-bg-color:#95d475;
+  --aux-hover-success-border:0.0625rem solid var(--aux-text-contrast-success-color);
   --aux-active-success-text-color:#529b2e;
   --aux-active-success-bg-color:#95d475;
 
-  --aux-text-confirm-color: var(---aux-text-contrast-color);
+  --aux-text-confirm-color: var(--aux-text-contrast-color);
   --aux-text-contrast-confirm-color:var(--aux-text-color);
-  --aux-confirm-border:0.0625rem solid var(--aux-text-contrast-confirm-color);
-  --aux-hover-confirm-text-color:#ffffff;
-  --aux-hover-confirm-bg-color:#95d475;
+  --aux-confirm-border:0.0625rem solid var(--aux-text-color);
+  --aux-hover-confirm-text-color:var(--aux-text-contrast-color);
+  --aux-hover-confirm-bg-color:var(--aux-text-color);
+  --aux-hover-confirm-border:0.0625rem solid var(--aux-text-contrast-color);
   --aux-active-confirm-text-color:#529b2e;
   --aux-active-confirm-bg-color:#95d475;
   
