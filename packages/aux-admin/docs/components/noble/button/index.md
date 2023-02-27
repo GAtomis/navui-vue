@@ -21,7 +21,8 @@
 ## Button 参数
 | 参数名 | 类型 | 默认值 | 说明 | 跳转 Demo |
 | :---- | :---- | :---- | :---- | :--------- |
-|  type    |"primary"|"success"|"confirm"; |   -   |  更新于v0.0.1-alpha.2   | [基本用法](#基本用法)|
+|  type    |primary,success,confirm |   -   |  更新于v0.0.1-alpha.2 主题颜色类型 | [基本用法](#基本用法)|
+|  fill    |Boolean|   false|  更新于v0.0.1-alpha.2  是否充填 | [基本用法](#基本用法)|
 |  round    | Boolean  |   false   |   倒圆角边   | [多种样式按钮](#多种样式按钮)      |
 |  circle    | Boolean  |   false   |   圆形   |     [多种样式按钮](#多种样式按钮)      |
 |  underline    | Boolean  |   false   |   下划线按钮   |[带下划线的按钮](#带下划线的按钮)      |
@@ -31,6 +32,23 @@
 | 插槽名 | 说明 | 跳转 Demo |
 | :---- | :---- | :--------- |
 |   default   |  任意内容  | [基本用法](#基本用法)   |
+
+## Swiper Bug&update
+
+::: tip 功能更新
+    参数:
+    fill =>是否充填按钮
+    type => 明确规定主题颜色
+
+:::
+
+
+::: tip BUG Q&A
+    Q1 : hover时候颜色冲突
+    A1: 已修复,默认反相对比颜色
+:::
+
+
 
 
 
