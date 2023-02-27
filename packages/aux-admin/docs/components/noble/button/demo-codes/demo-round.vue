@@ -4,7 +4,7 @@
     <aux-noble-button round >
       <span>加入购物</span>
     </aux-noble-button>
-    <aux-noble-button  round>
+    <aux-noble-button fill round>
       <span>筛选</span>
       <i class="iconfont icon-control1"></i>
     </aux-noble-button>

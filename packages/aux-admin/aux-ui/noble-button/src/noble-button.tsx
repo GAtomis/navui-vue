@@ -14,6 +14,6 @@ export default defineComponent({
     // console.log(data.value);
     const {classes,color} =useButton(props,ctx as SetupContext)
 
-    return () =><button disabled={props.disabled} style={color.value&&`--aux-text-color:${color.value}`} class={classes.value }>{ctx.slots.default?.() ?? "noble-button"}</button>
+    return () =><button disabled={props.disabled} style={color.value&&`--aux-nb-text-color:${color.value}`} class={classes.value }>{ctx.slots.default?.() ?? "noble-button"}</button>
   }
 });

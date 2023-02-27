@@ -4,11 +4,14 @@
     <aux-noble-button >
       <span>加入购物</span>
     </aux-noble-button>
-    <aux-noble-button >
-      <span>即可订购</span>
-    </aux-noble-button>
     <aux-noble-button  disabled>
       <span>禁止</span>
+    </aux-noble-button>
+    <aux-noble-button type="success"   fill>
+      <span>登陆微信</span>
+    </aux-noble-button>
+    <aux-noble-button type="primary"   fill>
+      <span>确认购买</span>
     </aux-noble-button>
   </div>
 </template>
@@ -18,7 +21,7 @@ import { defineComponent, ref } from 'vue';
 import {  NobleButton as AuxNobleButton } from "../../../../../aux-ui/main"
 
 
-const words = ref("So do i")
+
 </script>
 <style scoped>
 .container {
