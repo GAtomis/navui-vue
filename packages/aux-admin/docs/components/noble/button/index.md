@@ -33,7 +33,7 @@
 | :---- | :---- | :--------- |
 |   default   |  任意内容  | [基本用法](#基本用法)   |
 
-## Swiper Bug&update
+## Button Bug&update
 
 ::: tip 功能更新
     参数:

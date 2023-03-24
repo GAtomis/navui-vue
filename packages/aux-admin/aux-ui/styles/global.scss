@@ -1,5 +1,8 @@
-@import './font.scss';
-@import './icon.scss';
+@use './font.scss';
+@use './icon.scss';
+@use './wise-ui.scss';
+
+
 $globa-prefix: aux;
 
 :root {
@@ -55,6 +58,7 @@ $globa-prefix: aux;
   --aux-not-allowed-color:#666666;
   --aux-fill-color-blank:#fff;
   --aux-transition-duration:.3s;
+
 
 
   // Colors
