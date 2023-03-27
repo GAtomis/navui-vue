@@ -31,17 +31,18 @@ const sidebar = {
                 },
                 {
                     text: 'Card', link: '/components/noble/card/'
-                },               
+                },
                 {
                     text: 'Swiper', link: '/components/noble/swiper/'
-                },     
+                },
                 {
                     text: 'Collapse', link: '/components/noble/collapse/'
                 },
-                
+
             ]
 
         },
+
         {
             text: 'navnav+',
             items: [
@@ -63,11 +64,24 @@ const sidebar = {
 
                     ]
                 },
-           
+
             ]
         },
+        {
+            text: "WISE Style",
+            collapsible: true,
+            collapsed: !true,
+            items: [
+                {
+                    text: 'Message', link: '/components/wise/message/'
+                },
 
-     
+            ]
+
+
+        }
+
+
 
     ],
     "/api/": [{

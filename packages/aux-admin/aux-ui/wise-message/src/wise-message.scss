@@ -1,4 +1,134 @@
 // 引入主题变量
 @import '../../styles/global.scss';
+
 .#{$globa-prefix}-wise-message {
+
+
+  --aux-message-info-bg-color: #f4f4f5;
+  --aux-message-success-bg-color: #f0f9eb;
+  --aux-message-danger-bg-color: #fef0f0;
+  --aux-message-warning-bg-color: #fdf6ec;
+  position: fixed;
+  z-index: 2001;
+  padding: 10px 15px;
+  border-radius: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 80px;
+  display: flex;
+  align-items: center;
+  border-width: 1px;
+  border-style: solid;
+  // border-color: $devui-line;
+  box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d;
+  // background-color: $devui-base-bg;
+  transition: top 0.5s ease;
+
+  &--success {
+    background-color: var(--aux-message-success-bg-color);
+    border-color: var(--success);
+  }
+
+  &--info {
+    background-color: var(--aux-message-info-bg-color);
+    border-color: var(--info);
+  }
+
+  &--warning {
+    background-color: var(--aux-message-warning-bg-color);
+    border-color:var(--warning);
+  }
+
+  &--error {
+    background-color: var(--aux-message-danger-bg-color);
+    border-color: var(--danger);
+  }
+
+}
+
+.#{$globa-prefix}-wise-message__close {
+  margin-left: auto;
+  padding-left: 10px;
+  line-height: 0;
+  cursor: pointer;
+}
+
+// 图标样式
+.#{$globa-prefix}-wise-message__image {
+  --aux-message-icon-info-color: var(--info);
+  --aux-message-icon-success-color: var(--success);
+  --aux-message-icon-danger-color: var(--danger);
+  --aux-message-icon-warning-color: var(--warning);
+  margin-top: 1px;
+  display: inline-block;
+  // width: $devui-font-size-icon;
+  // min-width: $devui-font-size-icon;
+  // min-height: $devui-font-size-icon;
+  // height: $devui-font-size-icon;
+  padding: 0;
+  line-height: 1;
+  margin-right: 10px;
+
+  &--success {
+    color: var(--aux-message-icon-success-color);
+  }
+
+  &--info {
+    color: var(--aux-message-icon-info-color);
+  }
+
+  &--warning {
+    color: var(--aux-message-icon-warning-color);
+  }
+
+  &--error {
+    color: var( --aux-message-icon-danger-color);
+  }
+}
+
+// 消息文本内容
+.#{$globa-prefix}-wise-message__content {
+  --aux-message-icon-info-color: var(--info);
+  --aux-message-icon-success-color: var(--success);
+  --aux-message-icon-danger-color: var(--danger);
+  --aux-message-icon-warning-color: var(--warning);
+  // font-size: $devui-font-size-message;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+
+  &--success {
+    color: var(--aux-message-icon-success-color);
+  }
+
+  &--info {
+    color: var(--aux-message-icon-info-color);
+  }
+
+  &--warning {
+    color: var(--aux-message-icon-warning-color);
+  }
+
+  &--error {
+    color: var( --aux-message-icon-danger-color);
+  }
+}
+
+
+
+.message-fade {
+
+  &-enter-active,
+  &-leave-active {
+    transform: translate(-50%, 0);
+    transition: all 0.5s ease;
+  }
+
+  &-enter-from,
+  &-leave-to {
+    opacity: 0;
+    transform: translate(-50%, -200%);
+  }
 }

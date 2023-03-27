@@ -10,6 +10,7 @@ import nobleCardInstall,{NobleCard} from "./noble-card"
 import nobleSwiperInstall,{Swiper,SwiperItem} from "./swiper"
 import nobleCollapseInstall ,{NobleCollapse,NobleCollapseItem} from './noble-collapse'
 import collapseTransitionInstall ,{CollapseTransition} from './collapse-transition'
+import wiseMessageInstall, { Message as WiseMessage } from './wise-message';
 import "./styles/global.scss"
 const installs = [
     GfgButtonInstall,
@@ -22,7 +23,8 @@ const installs = [
     nobleCardInstall,
     nobleSwiperInstall,
     nobleCollapseInstall,
-    collapseTransitionInstall
+    collapseTransitionInstall,
+    wiseMessageInstall
 ]
 
 export {
@@ -38,7 +40,8 @@ export {
     SwiperItem,
     NobleCollapse,
     NobleCollapseItem,
-    CollapseTransition
+    CollapseTransition,
+    WiseMessage
 }
 export default {
     verison: '0.0.1',

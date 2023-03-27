@@ -59,6 +59,7 @@ $globa-prefix: aux;
   --aux-fill-color-blank:#fff;
   --aux-transition-duration:.3s;
 
+// wise
 
 
   // Colors
@@ -69,6 +70,13 @@ $globa-prefix: aux;
   --white: #ffffff;
   --blue: #0071e3;
   --blueRgba: "0, 113, 227";
+  --black: #000000;
+  --primary:#409eff;
+  --success:#67c23a;
+  --warning:#e6a23c;
+  --danger:#f56c6c;
+  --error: #f56c6c;
+  --info:#909399;
 
   //fonts
   --fontL: "Source Sans Pro light";
