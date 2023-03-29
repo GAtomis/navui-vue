@@ -1,9 +1,17 @@
 import type { PropType, ExtractPropTypes } from 'vue';
-
+import {DIRECTION,CLOSE_MODE} from './emum'
 export const drawerProps = {
   modelValue: {
     type: Boolean,
     default: false,
+  },
+  isOverlay:{
+    type:Boolean,
+    default:true
+  },
+  closeMode:{
+    type:  String as PropType<'outside'| 'none'>,
+    default:()=>CLOSE_MODE.Outside 
   },
   size:{
     type: String,
@@ -23,7 +31,7 @@ export const drawerProps = {
   },
   position: {
     type: String as PropType<'left' | 'right'|'top'|'bottom'>,
-    default: 'right',
+    default:DIRECTION.Right,
   },
 } as const;
 
