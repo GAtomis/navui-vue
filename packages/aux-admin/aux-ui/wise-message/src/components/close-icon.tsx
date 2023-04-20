@@ -6,7 +6,7 @@ export default defineComponent({
         const ns = useNamespace('wise-message')
         return () => (
             <div class={ns.e('icon-close')} onClick={(e) => emit('click', e)}>
-                <i class="iconfont icon-times"></i>
+                <i class="iconfont icon-close"></i>
             </div>
         );
     },

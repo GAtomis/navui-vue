@@ -1,6 +1,6 @@
-import "./chunk-OROXOI2D.js";
+import "./chunk-DFKQJ226.js";
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+ssr-window@4.0.2/node_modules/ssr-window/ssr-window.esm.js
+// ../../node_modules/.pnpm/ssr-window@4.0.2/node_modules/ssr-window/ssr-window.esm.js
 function isObject(obj) {
   return obj !== null && typeof obj === "object" && "constructor" in obj && obj.constructor === Object;
 }
@@ -144,7 +144,7 @@ function getWindow() {
   return win;
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/shared/utils.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/shared/utils.js
 function deleteProps(obj) {
   const object = obj;
   Object.keys(object).forEach((key) => {
@@ -274,7 +274,7 @@ function animateCSSModeScroll({
     return dir === "next" && current >= target || dir === "prev" && current <= target;
   };
   const animate = () => {
-    time = new Date().getTime();
+    time = (/* @__PURE__ */ new Date()).getTime();
     if (startTime === null) {
       startTime = time;
     }
@@ -404,7 +404,7 @@ function elementOuterSize(el, size, includeMargins) {
   return el.offsetWidth;
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/shared/get-support.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/shared/get-support.js
 var support;
 function calcSupport() {
   const window2 = getWindow();
@@ -421,7 +421,7 @@ function getSupport() {
   return support;
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/shared/get-device.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/shared/get-device.js
 var deviceCached;
 function calcDevice({
   userAgent
@@ -466,7 +466,7 @@ function getDevice(overrides = {}) {
   return deviceCached;
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/shared/get-browser.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/shared/get-browser.js
 var browser;
 function calcBrowser() {
   const window2 = getWindow();
@@ -495,7 +495,7 @@ function getBrowser() {
   return browser;
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/modules/resize/resize.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/modules/resize/resize.js
 function Resize({
   swiper,
   on,
@@ -567,7 +567,7 @@ function Resize({
   });
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/modules/observer/observer.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/modules/observer/observer.js
 function Observer({
   swiper,
   extendParams,
@@ -579,6 +579,8 @@ function Observer({
   const attach = (target, options = {}) => {
     const ObserverFunc = window2.MutationObserver || window2.WebkitMutationObserver;
     const observer = new ObserverFunc((mutations) => {
+      if (swiper.__preventObserver__)
+        return;
       if (mutations.length === 1) {
         emit("observerUpdate", mutations[0]);
         return;
@@ -630,7 +632,7 @@ function Observer({
   on("destroy", destroy);
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/events-emitter.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/events-emitter.js
 var events_emitter_default = {
   on(events2, handler, priority) {
     const self = this;
@@ -741,7 +743,7 @@ var events_emitter_default = {
   }
 };
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/update/updateSize.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/update/updateSize.js
 function updateSize() {
   const swiper = this;
   let width;
@@ -773,7 +775,7 @@ function updateSize() {
   });
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/update/updateSlides.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/update/updateSlides.js
 function updateSlides() {
   const swiper = this;
   function getDirectionLabel(property) {
@@ -1066,7 +1068,7 @@ function updateSlides() {
   }
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/update/updateAutoHeight.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/update/updateAutoHeight.js
 function updateAutoHeight(speed) {
   const swiper = this;
   const activeSlides = [];
@@ -1080,7 +1082,7 @@ function updateAutoHeight(speed) {
   }
   const getSlideByIndex = (index) => {
     if (isVirtual) {
-      return swiper.slides.filter((el) => parseInt(el.getAttribute("data-swiper-slide-index"), 10) === index)[0];
+      return swiper.getSlideIndexByData(index);
     }
     return swiper.slides[index];
   };
@@ -1110,7 +1112,7 @@ function updateAutoHeight(speed) {
     swiper.wrapperEl.style.height = `${newHeight}px`;
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/update/updateSlidesOffset.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/update/updateSlidesOffset.js
 function updateSlidesOffset() {
   const swiper = this;
   const slides = swiper.slides;
@@ -1120,7 +1122,7 @@ function updateSlidesOffset() {
   }
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/update/updateSlidesProgress.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/update/updateSlidesProgress.js
 function updateSlidesProgress(translate = this && this.translate || 0) {
   const swiper = this;
   const params = swiper.params;
@@ -1162,7 +1164,7 @@ function updateSlidesProgress(translate = this && this.translate || 0) {
   }
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/update/updateProgress.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/update/updateProgress.js
 function updateProgress(translate) {
   const swiper = this;
   if (typeof translate === "undefined") {
@@ -1195,8 +1197,8 @@ function updateProgress(translate) {
       progress = 1;
   }
   if (params.loop) {
-    const firstSlideIndex = elementIndex(swiper.slides.filter((el) => el.getAttribute("data-swiper-slide-index") === "0")[0]);
-    const lastSlideIndex = elementIndex(swiper.slides.filter((el) => el.getAttribute("data-swiper-slide-index") * 1 === swiper.slides.length - 1)[0]);
+    const firstSlideIndex = swiper.getSlideIndexByData(0);
+    const lastSlideIndex = swiper.getSlideIndexByData(swiper.slides.length - 1);
     const firstSlideTranslate = swiper.slidesGrid[firstSlideIndex];
     const lastSlideTranslate = swiper.slidesGrid[lastSlideIndex];
     const translateMax = swiper.slidesGrid[swiper.slidesGrid.length - 1];
@@ -1229,7 +1231,7 @@ function updateProgress(translate) {
   swiper.emit("progress", progress);
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/update/updateSlidesClasses.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/update/updateSlidesClasses.js
 function updateSlidesClasses() {
   const swiper = this;
   const {
@@ -1280,7 +1282,51 @@ function updateSlidesClasses() {
   swiper.emitSlidesClasses();
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/update/updateActiveIndex.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/shared/process-lazy-preloader.js
+var processLazyPreloader = (swiper, imageEl) => {
+  if (!swiper || swiper.destroyed || !swiper.params)
+    return;
+  const slideSelector = () => swiper.isElement ? `swiper-slide` : `.${swiper.params.slideClass}`;
+  const slideEl = imageEl.closest(slideSelector());
+  if (slideEl) {
+    const lazyEl = slideEl.querySelector(`.${swiper.params.lazyPreloaderClass}`);
+    if (lazyEl)
+      lazyEl.remove();
+  }
+};
+var unlazy = (swiper, index) => {
+  if (!swiper.slides[index])
+    return;
+  const imageEl = swiper.slides[index].querySelector('[loading="lazy"]');
+  if (imageEl)
+    imageEl.removeAttribute("loading");
+};
+var preload = (swiper) => {
+  if (!swiper || swiper.destroyed || !swiper.params)
+    return;
+  let amount = swiper.params.lazyPreloadPrevNext;
+  const len = swiper.slides.length;
+  if (!len || !amount || amount < 0)
+    return;
+  amount = Math.min(amount, len);
+  const slidesPerView = swiper.params.slidesPerView === "auto" ? swiper.slidesPerViewDynamic() : Math.ceil(swiper.params.slidesPerView);
+  const activeIndex = swiper.activeIndex;
+  const slideIndexLastInView = activeIndex + slidesPerView - 1;
+  if (swiper.params.rewind) {
+    for (let i = activeIndex - amount; i <= slideIndexLastInView + amount; i += 1) {
+      const realIndex = (i % len + len) % len;
+      if (realIndex !== activeIndex && realIndex > slideIndexLastInView)
+        unlazy(swiper, realIndex);
+    }
+  } else {
+    for (let i = Math.max(slideIndexLastInView - amount, 0); i <= Math.min(slideIndexLastInView + amount, len - 1); i += 1) {
+      if (i !== activeIndex && i > slideIndexLastInView)
+        unlazy(swiper, i);
+    }
+  }
+};
+
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/update/updateActiveIndex.js
 function getActiveIndexByTranslate(swiper) {
   const {
     slidesGrid,
@@ -1362,6 +1408,9 @@ function updateActiveIndex(newActiveIndex) {
     previousIndex,
     activeIndex
   });
+  if (swiper.initialized) {
+    preload(swiper);
+  }
   swiper.emit("activeIndexChange");
   swiper.emit("snapIndexChange");
   if (previousRealIndex !== realIndex) {
@@ -1372,7 +1421,7 @@ function updateActiveIndex(newActiveIndex) {
   }
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/update/updateClickedSlide.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/update/updateClickedSlide.js
 function updateClickedSlide(e) {
   const swiper = this;
   const params = swiper.params;
@@ -1405,7 +1454,7 @@ function updateClickedSlide(e) {
   }
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/update/index.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/update/index.js
 var update_default = {
   updateSize,
   updateSlides,
@@ -1418,7 +1467,7 @@ var update_default = {
   updateClickedSlide
 };
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/translate/getTranslate.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/translate/getTranslate.js
 function getSwiperTranslate(axis = this.isHorizontal() ? "x" : "y") {
   const swiper = this;
   const {
@@ -1439,7 +1488,7 @@ function getSwiperTranslate(axis = this.isHorizontal() ? "x" : "y") {
   return currentTranslate || 0;
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/translate/setTranslate.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/translate/setTranslate.js
 function setTranslate(translate, byController) {
   const swiper = this;
   const {
@@ -1480,17 +1529,17 @@ function setTranslate(translate, byController) {
   swiper.emit("setTranslate", swiper.translate, byController);
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/translate/minTranslate.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/translate/minTranslate.js
 function minTranslate() {
   return -this.snapGrid[0];
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/translate/maxTranslate.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/translate/maxTranslate.js
 function maxTranslate() {
   return -this.snapGrid[this.snapGrid.length - 1];
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/translate/translateTo.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/translate/translateTo.js
 function translateTo(translate = 0, speed = this.params.speed, runCallbacks = true, translateBounds = true, internal) {
   const swiper = this;
   const {
@@ -1566,7 +1615,7 @@ function translateTo(translate = 0, speed = this.params.speed, runCallbacks = tr
   return true;
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/translate/index.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/translate/index.js
 var translate_default = {
   getTranslate: getSwiperTranslate,
   setTranslate,
@@ -1575,7 +1624,7 @@ var translate_default = {
   translateTo
 };
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/transition/setTransition.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/transition/setTransition.js
 function setTransition(duration, byController) {
   const swiper = this;
   if (!swiper.params.cssMode) {
@@ -1584,7 +1633,7 @@ function setTransition(duration, byController) {
   swiper.emit("setTransition", duration, byController);
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/transition/transitionEmit.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/transition/transitionEmit.js
 function transitionEmit({
   swiper,
   runCallbacks,
@@ -1619,7 +1668,7 @@ function transitionEmit({
   }
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/transition/transitionStart.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/transition/transitionStart.js
 function transitionStart(runCallbacks = true, direction) {
   const swiper = this;
   const {
@@ -1638,7 +1687,7 @@ function transitionStart(runCallbacks = true, direction) {
   });
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/transition/transitionEnd.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/transition/transitionEnd.js
 function transitionEnd(runCallbacks = true, direction) {
   const swiper = this;
   const {
@@ -1656,14 +1705,14 @@ function transitionEnd(runCallbacks = true, direction) {
   });
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/transition/index.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/transition/index.js
 var transition_default = {
   setTransition,
   transitionStart,
   transitionEnd
 };
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/slide/slideTo.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/slide/slideTo.js
 function slideTo(index = 0, speed = this.params.speed, runCallbacks = true, internal, initial) {
   if (typeof index === "string") {
     index = parseInt(index, 10);
@@ -1808,7 +1857,7 @@ function slideTo(index = 0, speed = this.params.speed, runCallbacks = true, inte
   return true;
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/slide/slideToLoop.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/slide/slideToLoop.js
 function slideToLoop(index = 0, speed = this.params.speed, runCallbacks = true, internal) {
   if (typeof index === "string") {
     const indexAsNumber = parseInt(index, 10);
@@ -1820,13 +1869,13 @@ function slideToLoop(index = 0, speed = this.params.speed, runCallbacks = true, 
     if (swiper.virtual && swiper.params.virtual.enabled) {
       newIndex = newIndex + swiper.virtual.slidesBefore;
     } else {
-      newIndex = elementIndex(swiper.slides.filter((slideEl) => slideEl.getAttribute("data-swiper-slide-index") * 1 === newIndex)[0]);
+      newIndex = swiper.getSlideIndexByData(newIndex);
     }
   }
   return swiper.slideTo(newIndex, speed, runCallbacks, internal);
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/slide/slideNext.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/slide/slideNext.js
 function slideNext(speed = this.params.speed, runCallbacks = true, internal) {
   const swiper = this;
   const {
@@ -1856,7 +1905,7 @@ function slideNext(speed = this.params.speed, runCallbacks = true, internal) {
   return swiper.slideTo(swiper.activeIndex + increment, speed, runCallbacks, internal);
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/slide/slidePrev.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/slide/slidePrev.js
 function slidePrev(speed = this.params.speed, runCallbacks = true, internal) {
   const swiper = this;
   const {
@@ -1915,13 +1964,13 @@ function slidePrev(speed = this.params.speed, runCallbacks = true, internal) {
   return swiper.slideTo(prevIndex, speed, runCallbacks, internal);
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/slide/slideReset.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/slide/slideReset.js
 function slideReset(speed = this.params.speed, runCallbacks = true, internal) {
   const swiper = this;
   return swiper.slideTo(swiper.activeIndex, speed, runCallbacks, internal);
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/slide/slideToClosest.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/slide/slideToClosest.js
 function slideToClosest(speed = this.params.speed, runCallbacks = true, internal, threshold = 0.5) {
   const swiper = this;
   let index = swiper.activeIndex;
@@ -1946,7 +1995,7 @@ function slideToClosest(speed = this.params.speed, runCallbacks = true, internal
   return swiper.slideTo(index, speed, runCallbacks, internal);
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/slide/slideToClickedSlide.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/slide/slideToClickedSlide.js
 function slideToClickedSlide() {
   const swiper = this;
   const {
@@ -1964,7 +2013,7 @@ function slideToClickedSlide() {
     if (params.centeredSlides) {
       if (slideToIndex < swiper.loopedSlides - slidesPerView / 2 || slideToIndex > swiper.slides.length - swiper.loopedSlides + slidesPerView / 2) {
         swiper.loopFix();
-        slideToIndex = elementIndex(elementChildren(slidesEl, `${slideSelector}[data-swiper-slide-index="${realIndex}"]`)[0]);
+        slideToIndex = swiper.getSlideIndex(elementChildren(slidesEl, `${slideSelector}[data-swiper-slide-index="${realIndex}"]`)[0]);
         nextTick(() => {
           swiper.slideTo(slideToIndex);
         });
@@ -1973,7 +2022,7 @@ function slideToClickedSlide() {
       }
     } else if (slideToIndex > swiper.slides.length - slidesPerView) {
       swiper.loopFix();
-      slideToIndex = elementIndex(elementChildren(slidesEl, `${slideSelector}[data-swiper-slide-index="${realIndex}"]`)[0]);
+      slideToIndex = swiper.getSlideIndex(elementChildren(slidesEl, `${slideSelector}[data-swiper-slide-index="${realIndex}"]`)[0]);
       nextTick(() => {
         swiper.slideTo(slideToIndex);
       });
@@ -1985,7 +2034,7 @@ function slideToClickedSlide() {
   }
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/slide/index.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/slide/index.js
 var slide_default = {
   slideTo,
   slideToLoop,
@@ -1996,7 +2045,7 @@ var slide_default = {
   slideToClickedSlide
 };
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/loop/loopCreate.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/loop/loopCreate.js
 function loopCreate(slideRealIndex) {
   const swiper = this;
   const {
@@ -2015,7 +2064,7 @@ function loopCreate(slideRealIndex) {
   });
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/loop/loopFix.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/loop/loopFix.js
 function loopFix({
   slideRealIndex,
   slideTo: slideTo2 = true,
@@ -2063,7 +2112,7 @@ function loopFix({
   const appendSlidesIndexes = [];
   let activeIndex = swiper.activeIndex;
   if (typeof activeSlideIndex === "undefined") {
-    activeSlideIndex = elementIndex(swiper.slides.filter((el) => el.classList.contains("swiper-slide-active"))[0]);
+    activeSlideIndex = swiper.getSlideIndex(swiper.slides.filter((el) => el.classList.contains(params.slideActiveClass))[0]);
   } else {
     activeIndex = activeSlideIndex;
   }
@@ -2072,13 +2121,13 @@ function loopFix({
   let slidesPrepended = 0;
   let slidesAppended = 0;
   if (activeSlideIndex < loopedSlides) {
-    slidesPrepended = loopedSlides - activeSlideIndex;
+    slidesPrepended = Math.max(loopedSlides - activeSlideIndex, params.slidesPerGroup);
     for (let i = 0; i < loopedSlides - activeSlideIndex; i += 1) {
       const index = i - Math.floor(i / slides.length) * slides.length;
       prependSlidesIndexes.push(slides.length - index - 1);
     }
   } else if (activeSlideIndex > swiper.slides.length - loopedSlides * 2) {
-    slidesAppended = activeSlideIndex - (swiper.slides.length - loopedSlides * 2);
+    slidesAppended = Math.max(activeSlideIndex - (swiper.slides.length - loopedSlides * 2), params.slidesPerGroup);
     for (let i = 0; i < slidesAppended; i += 1) {
       const index = i - Math.floor(i / slides.length) * slides.length;
       appendSlidesIndexes.push(index);
@@ -2148,7 +2197,7 @@ function loopFix({
     };
     if (Array.isArray(swiper.controller.control)) {
       swiper.controller.control.forEach((c) => {
-        if (c.params.loop)
+        if (!c.destroyed && c.params.loop)
           c.loopFix(loopParams);
       });
     } else if (swiper.controller.control instanceof swiper.constructor && swiper.controller.control.params.loop) {
@@ -2158,11 +2207,10 @@ function loopFix({
   swiper.emit("loopFix");
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/loop/loopDestroy.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/loop/loopDestroy.js
 function loopDestroy() {
   const swiper = this;
   const {
-    slides,
     params,
     slidesEl
   } = swiper;
@@ -2170,11 +2218,11 @@ function loopDestroy() {
     return;
   swiper.recalcSlides();
   const newSlidesOrder = [];
-  slides.forEach((slideEl) => {
+  swiper.slides.forEach((slideEl) => {
     const index = typeof slideEl.swiperSlideIndex === "undefined" ? slideEl.getAttribute("data-swiper-slide-index") * 1 : slideEl.swiperSlideIndex;
     newSlidesOrder[index] = slideEl;
   });
-  slides.forEach((slideEl) => {
+  swiper.slides.forEach((slideEl) => {
     slideEl.removeAttribute("data-swiper-slide-index");
   });
   newSlidesOrder.forEach((slideEl) => {
@@ -2184,39 +2232,55 @@ function loopDestroy() {
   swiper.slideTo(swiper.realIndex, 0);
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/loop/index.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/loop/index.js
 var loop_default = {
   loopCreate,
   loopFix,
   loopDestroy
 };
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/grab-cursor/setGrabCursor.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/grab-cursor/setGrabCursor.js
 function setGrabCursor(moving) {
   const swiper = this;
   if (!swiper.params.simulateTouch || swiper.params.watchOverflow && swiper.isLocked || swiper.params.cssMode)
     return;
   const el = swiper.params.touchEventsTarget === "container" ? swiper.el : swiper.wrapperEl;
+  if (swiper.isElement) {
+    swiper.__preventObserver__ = true;
+  }
   el.style.cursor = "move";
   el.style.cursor = moving ? "grabbing" : "grab";
+  if (swiper.isElement) {
+    requestAnimationFrame(() => {
+      swiper.__preventObserver__ = false;
+    });
+  }
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/grab-cursor/unsetGrabCursor.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/grab-cursor/unsetGrabCursor.js
 function unsetGrabCursor() {
   const swiper = this;
   if (swiper.params.watchOverflow && swiper.isLocked || swiper.params.cssMode) {
     return;
   }
+  if (swiper.isElement) {
+    swiper.__preventObserver__ = true;
+  }
   swiper[swiper.params.touchEventsTarget === "container" ? "el" : "wrapperEl"].style.cursor = "";
+  if (swiper.isElement) {
+    requestAnimationFrame(() => {
+      swiper.__preventObserver__ = false;
+    });
+  }
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/grab-cursor/index.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/grab-cursor/index.js
 var grab_cursor_default = {
   setGrabCursor,
   unsetGrabCursor
 };
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/events/onTouchStart.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/events/onTouchStart.js
 function closestElement(selector, base = this) {
   function __closestFrom(el) {
     if (!el || el === getDocument() || el === getWindow())
@@ -2329,7 +2393,7 @@ function onTouchStart(event2) {
   swiper.emit("touchStart", e);
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/events/onTouchMove.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/events/onTouchMove.js
 function onTouchMove(event2) {
   const document2 = getDocument();
   const swiper = this;
@@ -2565,7 +2629,7 @@ function onTouchMove(event2) {
   swiper.setTranslate(data.currentTranslate);
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/events/onTouchEnd.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/events/onTouchEnd.js
 function onTouchEnd(event2) {
   const swiper = this;
   const data = swiper.touchEventsData;
@@ -2573,8 +2637,12 @@ function onTouchEnd(event2) {
   if (pointerIndex >= 0) {
     data.evCache.splice(pointerIndex, 1);
   }
-  if (["pointercancel", "pointerout", "pointerleave"].includes(event2.type))
-    return;
+  if (["pointercancel", "pointerout", "pointerleave"].includes(event2.type)) {
+    const proceed = event2.type === "pointercancel" && (swiper.browser.isSafari || swiper.browser.isWebView);
+    if (!proceed) {
+      return;
+    }
+  }
   const {
     params,
     touches,
@@ -2709,7 +2777,7 @@ function onTouchEnd(event2) {
   }
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/events/onResize.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/events/onResize.js
 var timeout;
 function onResize() {
   const swiper = this;
@@ -2746,7 +2814,9 @@ function onResize() {
   if (swiper.autoplay && swiper.autoplay.running && swiper.autoplay.paused) {
     clearTimeout(timeout);
     timeout = setTimeout(() => {
-      swiper.autoplay.resume();
+      if (swiper.autoplay && swiper.autoplay.running && swiper.autoplay.paused) {
+        swiper.autoplay.resume();
+      }
     }, 500);
   }
   swiper.allowSlidePrev = allowSlidePrev;
@@ -2756,7 +2826,7 @@ function onResize() {
   }
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/events/onClick.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/events/onClick.js
 function onClick(e) {
   const swiper = this;
   if (!swiper.enabled)
@@ -2771,7 +2841,7 @@ function onClick(e) {
   }
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/events/onScroll.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/events/onScroll.js
 function onScroll() {
   const swiper = this;
   const {
@@ -2804,27 +2874,14 @@ function onScroll() {
   swiper.emit("setTranslate", swiper.translate, false);
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/shared/process-lazy-preloader.js
-var processLazyPreloader = (swiper, imageEl) => {
-  if (!swiper || swiper.destroyed || !swiper.params)
-    return;
-  const slideSelector = () => swiper.isElement ? `swiper-slide` : `.${swiper.params.slideClass}`;
-  const slideEl = imageEl.closest(slideSelector());
-  if (slideEl) {
-    const lazyEl = slideEl.querySelector(`.${swiper.params.lazyPreloaderClass}`);
-    if (lazyEl)
-      lazyEl.remove();
-  }
-};
-
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/events/onLoad.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/events/onLoad.js
 function onLoad(e) {
   const swiper = this;
   processLazyPreloader(swiper, e.target);
   swiper.update();
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/events/index.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/events/index.js
 var dummyEventAttached = false;
 function dummyEventListener() {
 }
@@ -2902,7 +2959,7 @@ var events_default = {
   detachEvents
 };
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/breakpoints/setBreakpoint.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/breakpoints/setBreakpoint.js
 var isGridEnabled = (swiper, params) => {
   return swiper.grid && params.grid && params.grid.rows > 1;
 };
@@ -2972,7 +3029,7 @@ function setBreakpoint() {
   swiper.emit("breakpoint", breakpointParams);
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/breakpoints/getBreakpoint.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/breakpoints/getBreakpoint.js
 function getBreakpoint(breakpoints, base = "window", containerEl) {
   if (!breakpoints || base === "container" && !containerEl)
     return void 0;
@@ -3010,13 +3067,13 @@ function getBreakpoint(breakpoints, base = "window", containerEl) {
   return breakpoint || "max";
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/breakpoints/index.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/breakpoints/index.js
 var breakpoints_default = {
   setBreakpoint,
   getBreakpoint
 };
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/classes/addClasses.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/classes/addClasses.js
 function prepareClasses(entries, prefix) {
   const resultClasses = [];
   entries.forEach((item) => {
@@ -3067,7 +3124,7 @@ function addClasses() {
   swiper.emitContainerClasses();
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/classes/removeClasses.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/classes/removeClasses.js
 function removeClasses() {
   const swiper = this;
   const {
@@ -3078,13 +3135,13 @@ function removeClasses() {
   swiper.emitContainerClasses();
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/classes/index.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/classes/index.js
 var classes_default = {
   addClasses,
   removeClasses
 };
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/check-overflow/index.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/check-overflow/index.js
 function checkOverflow() {
   const swiper = this;
   const {
@@ -3118,7 +3175,7 @@ var check_overflow_default = {
   checkOverflow
 };
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/defaults.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/defaults.js
 var defaults_default = {
   init: true,
   direction: "horizontal",
@@ -3229,13 +3286,14 @@ var defaults_default = {
   slidePrevClass: "swiper-slide-prev",
   wrapperClass: "swiper-wrapper",
   lazyPreloaderClass: "swiper-lazy-preloader",
+  lazyPreloadPrevNext: 0,
   // Callbacks
   runCallbacksOnInit: true,
   // Internals
   _emitClasses: false
 };
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/moduleExtendParams.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/moduleExtendParams.js
 function moduleExtendParams(params, allModulesParams) {
   return function extendParams(obj = {}) {
     const moduleParamName = Object.keys(obj)[0];
@@ -3269,7 +3327,7 @@ function moduleExtendParams(params, allModulesParams) {
   };
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/core/core.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/core/core.js
 var prototypes = {
   eventsEmitter: events_emitter_default,
   update: update_default,
@@ -3391,7 +3449,7 @@ var Swiper = class {
         // Form elements to match
         focusableElements: swiper.params.focusableElements,
         // Last click time
-        lastClickTime: now(),
+        lastClickTime: 0,
         clickTimeout: void 0,
         // Velocities
         velocities: [],
@@ -3419,6 +3477,18 @@ var Swiper = class {
       swiper.init();
     }
     return swiper;
+  }
+  getSlideIndex(slideEl) {
+    const {
+      slidesEl,
+      params
+    } = this;
+    const slides = elementChildren(slidesEl, `.${params.slideClass}, swiper-slide`);
+    const firstSlideIndex = elementIndex(slides[0]);
+    return elementIndex(slideEl) - firstSlideIndex;
+  }
+  getSlideIndexByData(index) {
+    return this.getSlideIndex(this.slides.filter((slideEl) => slideEl.getAttribute("data-swiper-slide-index") * 1 === index)[0]);
   }
   recalcSlides() {
     const swiper = this;
@@ -3710,7 +3780,9 @@ var Swiper = class {
         });
       }
     });
+    preload(swiper);
     swiper.initialized = true;
+    preload(swiper);
     swiper.emit("init");
     swiper.emit("afterInit");
     return swiper;
@@ -3789,7 +3861,7 @@ Object.keys(prototypes).forEach((prototypeGroup) => {
 Swiper.use([Resize, Observer]);
 var core_default = Swiper;
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/modules/virtual/virtual.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/modules/virtual/virtual.js
 function Virtual({
   swiper,
   extendParams,
@@ -3838,7 +3910,7 @@ function Virtual({
     }
     slideEl.setAttribute("data-swiper-slide-index", index);
     if (!params.renderSlide) {
-      slideEl.textContent = slide;
+      slideEl.innerHTML = slide;
     }
     if (params.cache)
       swiper.virtual.cache[index] = slideEl;
@@ -4128,7 +4200,7 @@ function Virtual({
   });
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/modules/keyboard/keyboard.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/modules/keyboard/keyboard.js
 function Keyboard({
   swiper,
   extendParams,
@@ -4255,7 +4327,7 @@ function Keyboard({
   });
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/modules/mousewheel/mousewheel.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/modules/mousewheel/mousewheel.js
 function Mousewheel({
   swiper,
   extendParams,
@@ -4574,7 +4646,7 @@ function Mousewheel({
   });
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/shared/create-element-if-not-defined.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/shared/create-element-if-not-defined.js
 function createElementIfNotDefined(swiper, originalParams, params, checkProps) {
   if (swiper.params.createElements) {
     Object.keys(checkProps).forEach((key) => {
@@ -4593,7 +4665,7 @@ function createElementIfNotDefined(swiper, originalParams, params, checkProps) {
   return params;
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/modules/navigation/navigation.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/modules/navigation/navigation.js
 function Navigation({
   swiper,
   extendParams,
@@ -4786,12 +4858,12 @@ function Navigation({
   });
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/shared/classes-to-selector.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/shared/classes-to-selector.js
 function classesToSelector(classes = "") {
-  return `.${classes.trim().replace(/([\.:!\/])/g, "\\$1").replace(/ /g, ".")}`;
+  return `.${classes.trim().replace(/([\.:!+\/])/g, "\\$1").replace(/ /g, ".")}`;
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/modules/pagination/pagination.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/modules/pagination/pagination.js
 function Pagination({
   swiper,
   extendParams,
@@ -4868,6 +4940,15 @@ function Pagination({
     e.preventDefault();
     const index = elementIndex(bulletEl) * swiper.params.slidesPerGroup;
     if (swiper.params.loop) {
+      if (swiper.realIndex === index)
+        return;
+      if (index < swiper.loopedSlides || index > swiper.slides.length - swiper.loopedSlides) {
+        swiper.loopFix({
+          direction: index < swiper.loopedSlides ? "prev" : "next",
+          activeSlideIndex: index,
+          slideTo: false
+        });
+      }
       swiper.slideToLoop(index);
     } else {
       swiper.slideTo(index);
@@ -4913,17 +4994,18 @@ function Pagination({
         midIndex = (lastIndex + firstIndex) / 2;
       }
       bullets.forEach((bulletEl) => {
-        bulletEl.classList.remove(...["", "-next", "-next-next", "-prev", "-prev-prev", "-main"].map((suffix) => `${params.bulletActiveClass}${suffix}`));
+        const classesToRemove = [...["", "-next", "-next-next", "-prev", "-prev-prev", "-main"].map((suffix) => `${params.bulletActiveClass}${suffix}`)].map((s) => typeof s === "string" && s.includes(" ") ? s.split(" ") : s).flat();
+        bulletEl.classList.remove(...classesToRemove);
       });
       if (el.length > 1) {
         bullets.forEach((bullet) => {
           const bulletIndex = elementIndex(bullet);
           if (bulletIndex === current) {
-            bullet.classList.add(params.bulletActiveClass);
+            bullet.classList.add(...params.bulletActiveClass.split(" "));
           }
           if (params.dynamicBullets) {
             if (bulletIndex >= firstIndex && bulletIndex <= lastIndex) {
-              bullet.classList.add(`${params.bulletActiveClass}-main`);
+              bullet.classList.add(...`${params.bulletActiveClass}-main`.split(" "));
             }
             if (bulletIndex === firstIndex) {
               setSideBullets(bullet, "prev");
@@ -4936,13 +5018,15 @@ function Pagination({
       } else {
         const bullet = bullets[current];
         if (bullet) {
-          bullet.classList.add(params.bulletActiveClass);
+          bullet.classList.add(...params.bulletActiveClass.split(" "));
         }
         if (params.dynamicBullets) {
           const firstDisplayedBullet = bullets[firstIndex];
           const lastDisplayedBullet = bullets[lastIndex];
           for (let i = firstIndex; i <= lastIndex; i += 1) {
-            bullets[i].classList.add(`${params.bulletActiveClass}-main`);
+            if (bullets[i]) {
+              bullets[i].classList.add(...`${params.bulletActiveClass}-main`.split(" "));
+            }
           }
           setSideBullets(firstDisplayedBullet, "prev");
           setSideBullets(lastDisplayedBullet, "next");
@@ -5035,12 +5119,13 @@ function Pagination({
         paginationHTML = `<span class="${params.progressbarFillClass}"></span>`;
       }
     }
+    swiper.pagination.bullets = [];
     el.forEach((subEl) => {
       if (params.type !== "custom") {
         subEl.innerHTML = paginationHTML || "";
       }
       if (params.type === "bullets") {
-        swiper.pagination.bullets = [...subEl.querySelectorAll(classesToSelector(params.bulletClass))];
+        swiper.pagination.bullets.push(...subEl.querySelectorAll(classesToSelector(params.bulletClass)));
       }
     });
     if (params.type !== "custom") {
@@ -5123,7 +5208,7 @@ function Pagination({
       });
     }
     if (swiper.pagination.bullets)
-      swiper.pagination.bullets.forEach((subEl) => subEl.classList.remove(params.bulletActiveClass));
+      swiper.pagination.bullets.forEach((subEl) => subEl.classList.remove(...params.bulletActiveClass.split(" ")));
   }
   on("init", () => {
     if (swiper.params.pagination.enabled === false) {
@@ -5214,7 +5299,7 @@ function Pagination({
   });
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/modules/scrollbar/scrollbar.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/modules/scrollbar/scrollbar.js
 function Scrollbar({
   swiper,
   extendParams,
@@ -5574,7 +5659,7 @@ function Scrollbar({
   });
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/modules/parallax/parallax.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/modules/parallax/parallax.js
 function Parallax({
   swiper,
   extendParams,
@@ -5686,7 +5771,7 @@ function Parallax({
   });
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/modules/zoom/zoom.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/modules/zoom/zoom.js
 function Zoom({
   swiper,
   extendParams,
@@ -5713,6 +5798,8 @@ function Zoom({
   let fakeGestureMoved;
   const evCache = [];
   const gesture = {
+    originX: 0,
+    originY: 0,
     slideEl: void 0,
     slideWidth: void 0,
     slideHeight: void 0,
@@ -5796,6 +5883,9 @@ function Zoom({
     return false;
   }
   function onGestureStart(e) {
+    if (e.pointerType === "mouse") {
+      evCache.splice(0, evCache.length);
+    }
     if (!eventWithinSlide(e))
       return;
     const params = swiper.params.zoom;
@@ -5829,7 +5919,8 @@ function Zoom({
     }
     if (gesture.imageEl) {
       const [originX, originY] = getScaleOrigin();
-      gesture.imageEl.style.transformOrigin = `${originX}px ${originY}px`;
+      gesture.originX = originX;
+      gesture.originY = originY;
       gesture.imageEl.style.transitionDuration = "0ms";
     }
     isScaling = true;
@@ -5862,6 +5953,8 @@ function Zoom({
   function onGestureEnd(e) {
     if (!eventWithinSlide(e))
       return;
+    if (e.pointerType === "mouse" && e.type === "pointerout")
+      return;
     const params = swiper.params.zoom;
     const zoom = swiper.zoom;
     const pointerIndex = evCache.findIndex((cachedEv) => cachedEv.pointerId === e.pointerId);
@@ -5879,8 +5972,16 @@ function Zoom({
     gesture.imageEl.style.transform = `translate3d(0,0,0) scale(${zoom.scale})`;
     currentScale = zoom.scale;
     isScaling = false;
-    if (zoom.scale === 1)
+    if (zoom.scale > 1 && gesture.slideEl) {
+      gesture.slideEl.classList.add(`${params.zoomedSlideClass}`);
+    } else if (zoom.scale <= 1 && gesture.slideEl) {
+      gesture.slideEl.classList.remove(`${params.zoomedSlideClass}`);
+    }
+    if (zoom.scale === 1) {
+      gesture.originX = 0;
+      gesture.originY = 0;
       gesture.slideEl = void 0;
+    }
   }
   function onTouchStart2(e) {
     const device = swiper.device;
@@ -5891,8 +5992,9 @@ function Zoom({
     if (device.android && e.cancelable)
       e.preventDefault();
     image.isTouched = true;
-    image.touchesStart.x = e.pageX;
-    image.touchesStart.y = e.pageY;
+    const event2 = evCache.length > 0 ? evCache[0] : e;
+    image.touchesStart.x = event2.pageX;
+    image.touchesStart.y = event2.pageY;
   }
   function onTouchMove2(e) {
     if (!eventWithinSlide(e) || !eventWithinZoomContainer(e))
@@ -5900,7 +6002,6 @@ function Zoom({
     const zoom = swiper.zoom;
     if (!gesture.imageEl)
       return;
-    swiper.allowClick = false;
     if (!image.isTouched || !gesture.slideEl)
       return;
     if (!image.isMoved) {
@@ -5922,6 +6023,10 @@ function Zoom({
     image.maxY = -image.minY;
     image.touchesCurrent.x = evCache.length > 0 ? evCache[0].pageX : e.pageX;
     image.touchesCurrent.y = evCache.length > 0 ? evCache[0].pageY : e.pageY;
+    const touchesDiff = Math.max(Math.abs(image.touchesCurrent.x - image.touchesStart.x), Math.abs(image.touchesCurrent.y - image.touchesStart.y));
+    if (touchesDiff > 5) {
+      swiper.allowClick = false;
+    }
     if (!image.isMoved && !isScaling) {
       if (swiper.isHorizontal() && (Math.floor(image.minX) === Math.floor(image.startX) && image.touchesCurrent.x < image.touchesStart.x || Math.floor(image.maxX) === Math.floor(image.startX) && image.touchesCurrent.x > image.touchesStart.x)) {
         image.isTouched = false;
@@ -5937,8 +6042,13 @@ function Zoom({
     }
     e.stopPropagation();
     image.isMoved = true;
-    image.currentX = image.touchesCurrent.x - image.touchesStart.x + image.startX;
-    image.currentY = image.touchesCurrent.y - image.touchesStart.y + image.startY;
+    const scaleRatio = (zoom.scale - currentScale) / (gesture.maxRatio - swiper.params.zoom.minRatio);
+    const {
+      originX,
+      originY
+    } = gesture;
+    image.currentX = image.touchesCurrent.x - image.touchesStart.x + image.startX + scaleRatio * (image.width - originX * 2);
+    image.currentY = image.touchesCurrent.y - image.touchesStart.y + image.startY + scaleRatio * (image.height - originY * 2);
     if (image.currentX < image.minX) {
       image.currentX = image.minX + 1 - (image.minX - image.currentX + 1) ** 0.8;
     }
@@ -6005,18 +6115,21 @@ function Zoom({
   }
   function onTransitionEnd() {
     const zoom = swiper.zoom;
-    if (gesture.slideEl && swiper.previousIndex !== swiper.activeIndex) {
+    if (gesture.slideEl && swiper.activeIndex !== swiper.slides.indexOf(gesture.slideEl)) {
       if (gesture.imageEl) {
         gesture.imageEl.style.transform = "translate3d(0,0,0) scale(1)";
       }
       if (gesture.imageWrapEl) {
         gesture.imageWrapEl.style.transform = "translate3d(0,0,0)";
       }
+      gesture.slideEl.classList.remove(`${swiper.params.zoom.zoomedSlideClass}`);
       zoom.scale = 1;
       currentScale = 1;
       gesture.slideEl = void 0;
       gesture.imageEl = void 0;
       gesture.imageWrapEl = void 0;
+      gesture.originX = 0;
+      gesture.originY = 0;
     }
   }
   function zoomIn(e) {
@@ -6116,6 +6229,10 @@ function Zoom({
       translateX = 0;
       translateY = 0;
     }
+    if (forceZoomRatio && zoom.scale === 1) {
+      gesture.originX = 0;
+      gesture.originY = 0;
+    }
     gesture.imageWrapEl.style.transitionDuration = "300ms";
     gesture.imageWrapEl.style.transform = `translate3d(${translateX}px, ${translateY}px,0)`;
     gesture.imageEl.style.transitionDuration = "300ms";
@@ -6155,6 +6272,8 @@ function Zoom({
     gesture.imageEl.style.transform = "translate3d(0,0,0) scale(1)";
     gesture.slideEl.classList.remove(`${params.zoomedSlideClass}`);
     gesture.slideEl = void 0;
+    gesture.originX = 0;
+    gesture.originY = 0;
   }
   function zoomToggle(e) {
     const zoom = swiper.zoom;
@@ -6189,7 +6308,7 @@ function Zoom({
     } = getListeners();
     swiper.wrapperEl.addEventListener("pointerdown", onGestureStart, passiveListener);
     swiper.wrapperEl.addEventListener("pointermove", onGestureChange, activeListenerWithCapture);
-    ["pointerup", "pointercancel"].forEach((eventName) => {
+    ["pointerup", "pointercancel", "pointerout"].forEach((eventName) => {
       swiper.wrapperEl.addEventListener(eventName, onGestureEnd, passiveListener);
     });
     swiper.wrapperEl.addEventListener("pointermove", onTouchMove2, activeListenerWithCapture);
@@ -6205,7 +6324,7 @@ function Zoom({
     } = getListeners();
     swiper.wrapperEl.removeEventListener("pointerdown", onGestureStart, passiveListener);
     swiper.wrapperEl.removeEventListener("pointermove", onGestureChange, activeListenerWithCapture);
-    ["pointerup", "pointercancel"].forEach((eventName) => {
+    ["pointerup", "pointercancel", "pointerout"].forEach((eventName) => {
       swiper.wrapperEl.removeEventListener(eventName, onGestureEnd, passiveListener);
     });
     swiper.wrapperEl.removeEventListener("pointermove", onTouchMove2, activeListenerWithCapture);
@@ -6252,7 +6371,7 @@ function Zoom({
   });
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/modules/controller/controller.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/modules/controller/controller.js
 function Controller({
   swiper,
   extendParams,
@@ -6313,6 +6432,8 @@ function Controller({
     let controlledTranslate;
     const Swiper2 = swiper.constructor;
     function setControlledTranslate(c) {
+      if (c.destroyed)
+        return;
       const translate = swiper.rtlTranslate ? -swiper.translate : swiper.translate;
       if (swiper.params.controller.by === "slide") {
         getInterpolateFunction(c);
@@ -6345,6 +6466,8 @@ function Controller({
     const controlled = swiper.controller.control;
     let i;
     function setControlledTransition(c) {
+      if (c.destroyed)
+        return;
       c.setTransition(duration, swiper);
       if (duration !== 0) {
         c.transitionStart();
@@ -6421,7 +6544,7 @@ function Controller({
   });
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/modules/a11y/a11y.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/modules/a11y/a11y.js
 function A11y({
   swiper,
   extendParams,
@@ -6601,7 +6724,7 @@ function A11y({
           addElLabel(bulletEl, params.paginationBulletMessage.replace(/\{\{index\}\}/, elementIndex(bulletEl) + 1));
         }
       }
-      if (bulletEl.matches(`.${swiper.params.pagination.bulletActiveClass}`)) {
+      if (bulletEl.matches(classesToSelector(swiper.params.pagination.bulletActiveClass))) {
         bulletEl.setAttribute("aria-current", "true");
       } else {
         bulletEl.removeAttribute("aria-current");
@@ -6763,7 +6886,7 @@ function A11y({
   });
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/modules/history/history.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/modules/history/history.js
 function History({
   swiper,
   extendParams,
@@ -6843,7 +6966,7 @@ function History({
         const slide = swiper.slides[i];
         const slideHistory = slugify(slide.getAttribute("data-history"));
         if (slideHistory === value) {
-          const index = elementIndex(slide);
+          const index = swiper.getSlideIndex(slide);
           swiper.slideTo(index, speed, runCallbacks);
         }
       }
@@ -6905,7 +7028,7 @@ function History({
   });
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/modules/hash-navigation/hash-navigation.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/modules/hash-navigation/hash-navigation.js
 function HashNavigation({
   swiper,
   extendParams,
@@ -6927,7 +7050,7 @@ function HashNavigation({
     const newHash = document2.location.hash.replace("#", "");
     const activeSlideHash = swiper.slides[swiper.activeIndex].getAttribute("data-hash");
     if (newHash !== activeSlideHash) {
-      const newIndex = elementIndex(elementChildren(swiper.slidesEl, `.${swiper.params.slideClass}[data-hash="${newHash}"], swiper-slide[data-hash="${newHash}"]`)[0]);
+      const newIndex = swiper.getSlideIndex(elementChildren(swiper.slidesEl, `.${swiper.params.slideClass}[data-hash="${newHash}"], swiper-slide[data-hash="${newHash}"]`)[0]);
       if (typeof newIndex === "undefined")
         return;
       swiper.slideTo(newIndex);
@@ -6957,7 +7080,7 @@ function HashNavigation({
         const slide = swiper.slides[i];
         const slideHash = slide.getAttribute("data-hash") || slide.getAttribute("data-history");
         if (slideHash === hash) {
-          const index = elementIndex(slide);
+          const index = swiper.getSlideIndex(slide);
           swiper.slideTo(index, speed, swiper.params.runCallbacksOnInit, true);
         }
       }
@@ -6993,7 +7116,7 @@ function HashNavigation({
   });
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/modules/autoplay/autoplay.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/modules/autoplay/autoplay.js
 function Autoplay({
   swiper,
   extendParams,
@@ -7022,7 +7145,7 @@ function Autoplay({
   let autoplayDelayTotal = params && params.autoplay ? params.autoplay.delay : 3e3;
   let autoplayDelayCurrent = params && params.autoplay ? params.autoplay.delay : 3e3;
   let autoplayTimeLeft;
-  let autoplayStartTime = new Date().getTime;
+  let autoplayStartTime = (/* @__PURE__ */ new Date()).getTime;
   let wasPaused;
   let isTouched;
   let pausedByTouch;
@@ -7046,7 +7169,7 @@ function Autoplay({
       autoplayDelayCurrent = autoplayTimeLeft;
       wasPaused = false;
     }
-    const timeLeft = swiper.autoplay.paused ? autoplayTimeLeft : autoplayStartTime + autoplayDelayCurrent - new Date().getTime();
+    const timeLeft = swiper.autoplay.paused ? autoplayTimeLeft : autoplayStartTime + autoplayDelayCurrent - (/* @__PURE__ */ new Date()).getTime();
     swiper.autoplay.timeLeft = timeLeft;
     emit("autoplayTimeLeft", timeLeft, timeLeft / autoplayDelayTotal);
     raf = requestAnimationFrame(() => {
@@ -7102,7 +7225,7 @@ function Autoplay({
         }
       }
       if (swiper.params.cssMode) {
-        autoplayStartTime = new Date().getTime();
+        autoplayStartTime = (/* @__PURE__ */ new Date()).getTime();
         requestAnimationFrame(() => {
           run();
         });
@@ -7156,7 +7279,7 @@ function Autoplay({
       return;
     }
     const delay = autoplayTimeLeft || swiper.params.autoplay.delay;
-    autoplayTimeLeft = delay - (new Date().getTime() - autoplayStartTime);
+    autoplayTimeLeft = delay - ((/* @__PURE__ */ new Date()).getTime() - autoplayStartTime);
     if (swiper.isEnd && autoplayTimeLeft < 0 && !swiper.params.loop)
       return;
     if (autoplayTimeLeft < 0)
@@ -7166,7 +7289,7 @@ function Autoplay({
   const resume = () => {
     if (swiper.isEnd && autoplayTimeLeft < 0 && !swiper.params.loop || swiper.destroyed || !swiper.autoplay.running)
       return;
-    autoplayStartTime = new Date().getTime();
+    autoplayStartTime = (/* @__PURE__ */ new Date()).getTime();
     if (pausedByInteraction) {
       pausedByInteraction = false;
       run(autoplayTimeLeft);
@@ -7223,7 +7346,7 @@ function Autoplay({
     if (swiper.params.autoplay.enabled) {
       attachMouseEvents();
       attachDocumentEvents();
-      autoplayStartTime = new Date().getTime();
+      autoplayStartTime = (/* @__PURE__ */ new Date()).getTime();
       start();
     }
   });
@@ -7287,7 +7410,7 @@ function Autoplay({
   });
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/modules/thumbs/thumbs.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/modules/thumbs/thumbs.js
 function Thumb({
   swiper,
   extendParams,
@@ -7483,7 +7606,7 @@ function Thumb({
   });
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/modules/free-mode/free-mode.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/modules/free-mode/free-mode.js
 function freeMode({
   swiper,
   extendParams,
@@ -7706,7 +7829,7 @@ function freeMode({
   });
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/modules/grid/grid.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/modules/grid/grid.js
 function Grid({
   swiper,
   extendParams
@@ -7807,7 +7930,7 @@ function Grid({
   };
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/modules/manipulation/methods/appendSlide.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/modules/manipulation/methods/appendSlide.js
 function appendSlide(slides) {
   const swiper = this;
   const {
@@ -7844,7 +7967,7 @@ function appendSlide(slides) {
   }
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/modules/manipulation/methods/prependSlide.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/modules/manipulation/methods/prependSlide.js
 function prependSlide(slides) {
   const swiper = this;
   const {
@@ -7885,7 +8008,7 @@ function prependSlide(slides) {
   swiper.slideTo(newActiveIndex, 0, false);
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/modules/manipulation/methods/addSlide.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/modules/manipulation/methods/addSlide.js
 function addSlide(index, slides) {
   const swiper = this;
   const {
@@ -7941,7 +8064,7 @@ function addSlide(index, slides) {
   }
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/modules/manipulation/methods/removeSlide.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/modules/manipulation/methods/removeSlide.js
 function removeSlide(slidesIndexes) {
   const swiper = this;
   const {
@@ -7986,7 +8109,7 @@ function removeSlide(slidesIndexes) {
   }
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/modules/manipulation/methods/removeAllSlides.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/modules/manipulation/methods/removeAllSlides.js
 function removeAllSlides() {
   const swiper = this;
   const slidesIndexes = [];
@@ -7996,7 +8119,7 @@ function removeAllSlides() {
   swiper.removeSlide(slidesIndexes);
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/modules/manipulation/manipulation.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/modules/manipulation/manipulation.js
 function Manipulation({
   swiper
 }) {
@@ -8009,7 +8132,7 @@ function Manipulation({
   });
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/shared/effect-init.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/shared/effect-init.js
 function effectInit(params) {
   const {
     effect,
@@ -8071,7 +8194,7 @@ function effectInit(params) {
   });
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/shared/effect-target.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/shared/effect-target.js
 function effectTarget(effectParams, slideEl) {
   const transformEl = getSlideTransformEl(slideEl);
   if (transformEl !== slideEl) {
@@ -8081,7 +8204,7 @@ function effectTarget(effectParams, slideEl) {
   return transformEl;
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/shared/effect-virtual-transition-end.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/shared/effect-virtual-transition-end.js
 function effectVirtualTransitionEnd({
   swiper,
   duration,
@@ -8106,7 +8229,7 @@ function effectVirtualTransitionEnd({
     } else {
       transitionEndTarget = transformElements.filter((transformEl) => {
         const el = transformEl.classList.contains("swiper-slide-transform") ? getSlide(transformEl) : transformEl;
-        return elementIndex(el) === activeIndex;
+        return swiper.getSlideIndex(el) === activeIndex;
       });
     }
     transitionEndTarget.forEach((el) => {
@@ -8127,7 +8250,7 @@ function effectVirtualTransitionEnd({
   }
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/modules/effect-fade/effect-fade.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/modules/effect-fade/effect-fade.js
 function EffectFade({
   swiper,
   extendParams,
@@ -8188,7 +8311,7 @@ function EffectFade({
   });
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/modules/effect-cube/effect-cube.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/modules/effect-cube/effect-cube.js
 function EffectCube({
   swiper,
   extendParams,
@@ -8360,7 +8483,7 @@ function EffectCube({
   });
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/shared/create-shadow.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/shared/create-shadow.js
 function createShadow(params, slideEl, side) {
   const shadowClass = `swiper-slide-shadow${side ? `-${side}` : ""}`;
   const shadowContainer = getSlideTransformEl(slideEl);
@@ -8372,7 +8495,7 @@ function createShadow(params, slideEl, side) {
   return shadowEl;
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/modules/effect-flip/effect-flip.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/modules/effect-flip/effect-flip.js
 function EffectFlip({
   swiper,
   extendParams,
@@ -8476,7 +8599,7 @@ function EffectFlip({
   });
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/modules/effect-coverflow/effect-coverflow.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/modules/effect-coverflow/effect-coverflow.js
 function EffectCoverflow({
   swiper,
   extendParams,
@@ -8575,7 +8698,7 @@ function EffectCoverflow({
   });
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/modules/effect-creative/effect-creative.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/modules/effect-creative/effect-creative.js
 function EffectCreative({
   swiper,
   extendParams,
@@ -8676,7 +8799,7 @@ function EffectCreative({
       targetEl.style.transform = transform;
       targetEl.style.opacity = opacityString;
       if (data.origin) {
-        targetEl.style.transformOrigin = opacityString;
+        targetEl.style.transformOrigin = data.origin;
       }
     }
   };
@@ -8709,7 +8832,7 @@ function EffectCreative({
   });
 }
 
-// ../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/modules/effect-cards/effect-cards.js
+// ../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/modules/effect-cards/effect-cards.js
 function EffectCards({
   swiper,
   extendParams,

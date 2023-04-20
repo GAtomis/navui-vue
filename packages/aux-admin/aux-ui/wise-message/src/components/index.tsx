@@ -2,7 +2,7 @@
 
 export  function SuccessIcon() {
   return (
-    <i class="iconfont icon-check-circle-fill"></i>
+    <i class="iconfont icon-check1"></i>
   )
 }
 export  function InfoIcon() {
@@ -12,7 +12,7 @@ export  function InfoIcon() {
 }
 export  function WarningIcon() {
   return (
-    <i class="iconfont icon-exclamationcircle-f"></i>
+    <i class="iconfont icon-warning"></i>
   )
 }
 export function ErrorIcon() {

@@ -16,7 +16,11 @@ import { GfgButton as AuxGfgButton ,WiseMessage} from "../../../../../aux-ui/mai
 const handleClick=(type:string)=>{
   console.log(12323);
   
-  WiseMessage.success("addd")
+  WiseMessage.success({
+    bordered:false,
+    showClose:true,
+    shadow:false
+  })
 }
 
 </script>

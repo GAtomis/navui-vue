@@ -1,44 +1,44 @@
 {
-  "hash": "9fbf5e06",
-  "browserHash": "8231b2bc",
+  "hash": "d4baafb0",
+  "browserHash": "43eb5317",
   "optimized": {
     "vue": {
-      "src": "../../../../../../node_modules/.pnpm/registry.npmmirror.com+vue@3.2.47/node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "src": "../../../../../../node_modules/.pnpm/vue@3.2.47/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "1d25349d",
+      "fileHash": "c41189ba",
       "needsInterop": false
     },
     "vitepress-theme-demoblock": {
-      "src": "../../../../../../node_modules/.pnpm/registry.npmmirror.com+vitepress-theme-demoblock@2.0.2_i6sg7ufwag4u2fxqefdnehf2pe/node_modules/vitepress-theme-demoblock/dist/node/index.cjs",
+      "src": "../../../../../../node_modules/.pnpm/vitepress-theme-demoblock@2.0.2_hghbulspu73jfdazs4i6yiqype/node_modules/vitepress-theme-demoblock/dist/node/index.mjs",
       "file": "vitepress-theme-demoblock.js",
-      "fileHash": "2c8ea7f1",
-      "needsInterop": true
-    },
-    "swiper": {
-      "src": "../../../../../../node_modules/.pnpm/registry.npmmirror.com+swiper@9.0.5/node_modules/swiper/swiper.esm.js",
-      "file": "swiper.js",
-      "fileHash": "3ea050e5",
-      "needsInterop": false
-    },
-    "lodash-es": {
-      "src": "../../../../../../node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/lodash.js",
-      "file": "lodash-es.js",
-      "fileHash": "0d659b38",
+      "fileHash": "476323bd",
       "needsInterop": false
     },
     "@vueuse/core": {
-      "src": "../../../../../../node_modules/.pnpm/registry.npmmirror.com+@vueuse+core@9.12.0_vue@3.2.47/node_modules/@vueuse/core/index.mjs",
+      "src": "../../../../../../node_modules/.pnpm/@vueuse+core@9.13.0_vue@3.2.47/node_modules/@vueuse/core/index.mjs",
       "file": "@vueuse_core.js",
-      "fileHash": "a931447d",
+      "fileHash": "6259b8b7",
+      "needsInterop": false
+    },
+    "lodash-es": {
+      "src": "../../../../../../node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/lodash.js",
+      "file": "lodash-es.js",
+      "fileHash": "d181bd2c",
+      "needsInterop": false
+    },
+    "swiper": {
+      "src": "../../../../../../node_modules/.pnpm/swiper@9.2.0/node_modules/swiper/swiper.esm.js",
+      "file": "swiper.js",
+      "fileHash": "e3862e1f",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-6FVGSOU7": {
-      "file": "chunk-6FVGSOU7.js"
+    "chunk-QXKVPRGZ": {
+      "file": "chunk-QXKVPRGZ.js"
     },
-    "chunk-OROXOI2D": {
-      "file": "chunk-OROXOI2D.js"
+    "chunk-DFKQJ226": {
+      "file": "chunk-DFKQJ226.js"
     }
   }
 }

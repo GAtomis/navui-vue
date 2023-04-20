@@ -1,12 +1,12 @@
-import { computed, defineComponent, Transition, watch,ref, nextTick } from 'vue';
+import { computed, defineComponent, Transition, watch, ref, nextTick } from 'vue';
 import type { SetupContext } from 'vue';
 import { drawerProps, DrawerProps } from './drawer-types';
 import './drawer.scss';
 import { Overlay } from "../../overlay"
 import { useNamespace } from '../../shared/hooks/use-namespace'
 import useDrawer from './hooks/use-drawer'
-import {useMouseInElement} from '@vueuse/core'
-import {CLOSE_MODE} from './emum'
+import { useMouseInElement } from '@vueuse/core'
+import { CLOSE_MODE } from './emum'
 export default defineComponent({
   name: 'AuxDrawer',
   props: drawerProps,
@@ -22,23 +22,23 @@ export default defineComponent({
       ctx.emit('update:modelValue', false);
       ctx.emit('close');
     }
-    const drawerRef=ref(null)
-    const {isOutside} =useMouseInElement(drawerRef)
-    const outsideClick=(e:MouseEvent)=>{
+    const drawerRef = ref(null)
+    const { isOutside } = useMouseInElement(drawerRef)
+    const outsideClick = (e: MouseEvent) => {
 
       closeDrawer()
-      
+
 
     }
 
     watch(() => props.modelValue, (newVal) => {
       if (newVal) {
         setTimeout(() => {
-          document.addEventListener('click',outsideClick)
+          document.addEventListener('click', outsideClick)
         }, 0);
 
-      }else{
-        document.removeEventListener('click',outsideClick)
+      } else {
+        document.removeEventListener('click', outsideClick)
       }
     })
     const Header = () => (<header>
@@ -54,20 +54,20 @@ export default defineComponent({
       {
         props.modelValue && (<div ref={drawerRef} class={`${ns.b()} ${props.position}`} style={styles.value}>
           {props.withHeader && <Header />}
-          <div >
+      
             {ctx.slots.default?.()}
-          </div>
+     
         </div>)
       }
 
     </Transition>)
-    const closeDrawer= () => {
-     props.closeMode===CLOSE_MODE.Outside&&beforeClose()
+    const closeDrawer = () => {
+      props.closeMode === CLOSE_MODE.Outside && beforeClose()
     }
 
 
     return () => {
- 
+
 
       return props.isOverlay ? (<Overlay v-model={props.modelValue}  >
         <DrawerContainer></DrawerContainer>
