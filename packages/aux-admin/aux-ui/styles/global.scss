@@ -18,7 +18,9 @@ $globa-prefix: aux;
   --fontxxs: 0.75em; //12 px
   --aux-border-color-lighter:#eee;
 
-
+  --aux-text-size-base:14px
+  --aux-text-size-radius-base: 4px;
+ 
   --aux-text-color:#fff;
   --aux-text-contrast-color:#000;
   --aux-border:var(--aux-text-contrast-color);
